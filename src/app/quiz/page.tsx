@@ -451,7 +451,7 @@ function QuizContent() {
 
       {/* AI Helper - shown in round 2+, fixed at bottom center */}
       {round > 1 && (
-        <div className="fixed bottom-24 left-1/2 -translate-x-1/2 z-10">
+        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-10">
           <AIHelper
             key={currentQuestion.id}
             question={currentQuestion.question}

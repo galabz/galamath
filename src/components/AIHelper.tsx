@@ -14,8 +14,9 @@ interface AIHelperProps {
 }
 
 export default function AIHelper({ question, hint, theme, answers, userName }: AIHelperProps) {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isActive, setIsActive] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
+  const [showText, setShowText] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const { completion, isLoading, complete } = useCompletion({
@@ -35,13 +36,18 @@ export default function AIHelper({ question, hint, theme, answers, userName }: A
 
   // Auto-speak when completion is ready
   useEffect(() => {
-    if (completion && !isLoading && isPlaying && !isSpeaking) {
+    if (completion && !isLoading && isActive && !isSpeaking && !showText) {
       speak(completion);
     }
-  }, [completion, isLoading, isPlaying]);
+  }, [completion, isLoading, isActive, showText]);
 
   const speakWithBrowser = (text: string) => {
-    if (typeof window === "undefined" || !window.speechSynthesis) return;
+    if (typeof window === "undefined" || !window.speechSynthesis) {
+      // No speech available, just show text
+      setIsSpeaking(false);
+      setShowText(true);
+      return;
+    }
 
     window.speechSynthesis.cancel();
 
@@ -57,7 +63,12 @@ export default function AIHelper({ question, hint, theme, answers, userName }: A
 
     utterance.onend = () => {
       setIsSpeaking(false);
-      setIsPlaying(false);
+      setShowText(true);
+    };
+
+    utterance.onerror = () => {
+      setIsSpeaking(false);
+      setShowText(true);
     };
 
     window.speechSynthesis.speak(utterance);
@@ -76,7 +87,6 @@ export default function AIHelper({ question, hint, theme, answers, userName }: A
       });
 
       if (!response.ok) {
-        // Fall back to browser speech
         speakWithBrowser(text);
         return;
       }
@@ -89,25 +99,25 @@ export default function AIHelper({ question, hint, theme, answers, userName }: A
 
       audio.onended = () => {
         setIsSpeaking(false);
-        setIsPlaying(false);
+        setShowText(true);
         URL.revokeObjectURL(audioUrl);
       };
 
       audio.onerror = () => {
         setIsSpeaking(false);
-        setIsPlaying(false);
+        setShowText(true);
         URL.revokeObjectURL(audioUrl);
       };
 
       await audio.play();
     } catch (error) {
-      // Fall back to browser speech
       speakWithBrowser(text);
     }
   };
 
   const handleAskHelp = async () => {
-    setIsPlaying(true);
+    setIsActive(true);
+    setShowText(false);
     await complete("", {
       body: {
         question,
@@ -127,89 +137,84 @@ export default function AIHelper({ question, hint, theme, answers, userName }: A
     if (typeof window !== "undefined" && window.speechSynthesis) {
       window.speechSynthesis.cancel();
     }
-    setIsPlaying(false);
     setIsSpeaking(false);
+    setShowText(true);
   };
 
   const handleReplay = () => {
     if (completion) {
-      setIsPlaying(true);
+      setShowText(false);
       speak(completion);
     }
   };
 
+  const isAnimating = isLoading || isSpeaking;
+
   return (
     <div className="flex flex-col items-center">
-      {/* Dancing Cat Button */}
-      {!isPlaying && !completion && (
+      {/* Initial state - paused cat, waiting for click */}
+      {!isActive && (
         <button
           onClick={handleAskHelp}
-          disabled={isLoading}
-          className="group relative transition-transform hover:scale-110 active:scale-95 disabled:opacity-50"
+          className="group relative transition-transform hover:scale-110 active:scale-95"
           title="Click me for help!"
         >
           <Lottie
             animationData={danceCatAnimation}
             loop={true}
+            autoplay={false}
             className="h-36 w-36"
           />
-          {!isLoading && (
-            <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-purple-500 px-3 py-1 text-xs font-semibold text-white opacity-0 transition-opacity group-hover:opacity-100">
-              Need help?
-            </span>
-          )}
-          {isLoading && (
-            <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-purple-500 px-3 py-1 text-xs font-semibold text-white animate-pulse">
-              Thinking...
-            </span>
-          )}
+          <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-purple-500 px-3 py-1 text-xs font-semibold text-white opacity-0 transition-opacity group-hover:opacity-100">
+            Need help?
+          </span>
         </button>
       )}
 
-      {/* Show response with controls */}
-      {(isLoading || completion) && (
+      {/* Loading/Speaking state - animated cat, no text */}
+      {isActive && !showText && (
+        <div className="flex flex-col items-center">
+          <Lottie
+            animationData={danceCatAnimation}
+            loop={true}
+            autoplay={true}
+            className="h-36 w-36"
+          />
+          <span className="mt-2 rounded-full bg-purple-500 px-4 py-1.5 text-sm font-semibold text-white animate-pulse">
+            {isLoading ? "Thinking..." : "Speaking..."}
+          </span>
+          {isSpeaking && (
+            <button
+              onClick={handleStop}
+              className="mt-2 rounded-lg bg-red-500 px-3 py-1.5 text-sm font-semibold text-white transition-all hover:bg-red-600 active:scale-95"
+            >
+              ⏹ Stop
+            </button>
+          )}
+        </div>
+      )}
+
+      {/* Done state - show text with replay option */}
+      {isActive && showText && completion && (
         <div className="w-full max-w-md rounded-2xl bg-white p-4 shadow-lg">
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-2">
               <Lottie
                 animationData={danceCatAnimation}
-                loop={isSpeaking}
+                loop={true}
+                autoplay={false}
                 className="h-12 w-12"
               />
               <span className="font-semibold text-gray-700">Cat Tutor</span>
             </div>
-            <div className="flex gap-2">
-              {(isPlaying || isSpeaking) && (
-                <button
-                  onClick={handleStop}
-                  className="rounded-lg bg-red-500 px-3 py-1.5 text-sm font-semibold text-white transition-all hover:bg-red-600 active:scale-95"
-                >
-                  ⏹ Stop
-                </button>
-              )}
-              {completion && !isPlaying && !isSpeaking && (
-                <button
-                  onClick={handleReplay}
-                  className="rounded-lg bg-purple-500 px-3 py-1.5 text-sm font-semibold text-white transition-all hover:bg-purple-600 active:scale-95"
-                >
-                  🔊 Replay
-                </button>
-              )}
-            </div>
+            <button
+              onClick={handleReplay}
+              className="rounded-lg bg-purple-500 px-3 py-1.5 text-sm font-semibold text-white transition-all hover:bg-purple-600 active:scale-95"
+            >
+              🔊 Replay
+            </button>
           </div>
-          <p className="text-gray-700 leading-relaxed">
-            {isLoading && !completion ? (
-              <span className="animate-pulse">Thinking about how to explain this...</span>
-            ) : (
-              completion
-            )}
-          </p>
-          {isSpeaking && (
-            <div className="mt-2 flex items-center gap-2 text-sm text-purple-600">
-              <span className="animate-pulse">🔊</span>
-              <span>Speaking...</span>
-            </div>
-          )}
+          <p className="text-gray-700 leading-relaxed">{completion}</p>
         </div>
       )}
     </div>
