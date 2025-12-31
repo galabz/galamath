@@ -1,0 +1,289 @@
+{
+  "theme": "Rate & Proportion Problems",
+  "themeId": "work-rate",
+  "level": "medium",
+  "totalTimeMinutes": 90,
+  "questionTimeMinutes": 2,
+  "questions": [
+    {
+      "id": 1,
+      "question": "2 boys paint a fence in 2 hours. How long would 3 boys take?",
+      "answers": ["80 minutes", "3 hours", "1 hour", "90 minutes"],
+      "correct": 0,
+      "explanation": "First find the total work: 2 boys × 2 hours = 4 boy-hours. Then divide by 3."
+    },
+    {
+      "id": 2,
+      "question": "Two cars start 200 km apart driving toward each other at 60 km/h and 40 km/h. When do they meet?",
+      "answers": ["2 hours", "3 hours", "2.5 hours", "4 hours"],
+      "correct": 0,
+      "explanation": "Combined speed toward each other = 60 + 40. Time = distance ÷ combined speed."
+    },
+    {
+      "id": 3,
+      "question": "A bathtub fills in 12 minutes and drains in 20 minutes. With both tap and drain open, how long to fill?",
+      "answers": ["8 minutes", "16 minutes", "30 minutes", "32 minutes"],
+      "correct": 2,
+      "explanation": "Net rate = filling rate - draining rate. Find common denominator."
+    },
+    {
+      "id": 4,
+      "question": "5 workers complete a job in 12 hours. How long for 4 workers?",
+      "answers": ["15 hours", "9.6 hours", "10 hours", "14 hours"],
+      "correct": 0,
+      "explanation": "Calculate total work first (worker-hours), then divide by new workers."
+    },
+    {
+      "id": 5,
+      "question": "A train traveling at 80 km/h takes 3 hours. How long at 60 km/h for the same distance?",
+      "answers": ["2.25 hours", "4 hours", "3.5 hours", "5 hours"],
+      "correct": 1,
+      "explanation": "First find distance = 80 × 3. Then time = distance ÷ 60."
+    },
+    {
+      "id": 6,
+      "question": "Two pipes fill a pool in 4 and 6 hours. If both run together, how long to fill?",
+      "answers": ["5 hours", "2.4 hours", "10 hours", "3 hours"],
+      "correct": 1,
+      "explanation": "Add rates: 1/4 + 1/6. Find common denominator, then invert."
+    },
+    {
+      "id": 7,
+      "question": "A cyclist goes uphill at 10 km/h and returns downhill at 30 km/h. If the hill is 15 km, what's the total time?",
+      "answers": ["2 hours", "1 hour", "3 hours", "1.5 hours"],
+      "correct": 0,
+      "explanation": "Time up = 15÷10. Time down = 15÷30. Add them."
+    },
+    {
+      "id": 8,
+      "question": "8 printers print books in 9 hours. How long for 12 printers?",
+      "answers": ["13.5 hours", "6 hours", "4.5 hours", "8 hours"],
+      "correct": 1,
+      "explanation": "Total = 72 printer-hours. Divide by 12."
+    },
+    {
+      "id": 9,
+      "question": "A car going 50 km/h leaves town A. 1 hour later, a car at 75 km/h follows. How long until it catches up?",
+      "answers": ["3 hours", "2 hours", "2.5 hours", "1.5 hours"],
+      "correct": 1,
+      "explanation": "First car has 50 km head start. Second gains 25 km/h. Time = 50 ÷ 25."
+    },
+    {
+      "id": 10,
+      "question": "A tank fills in 5 hours. A leak empties it in 15 hours. How long to fill with the leak?",
+      "answers": ["10 hours", "7.5 hours", "20 hours", "3.75 hours"],
+      "correct": 1,
+      "explanation": "Net rate = 1/5 - 1/15. Find common denominator."
+    },
+    {
+      "id": 11,
+      "question": "10 workers finish in 9 hours. How long for 15 workers?",
+      "answers": ["13.5 hours", "5 hours", "6 hours", "4 hours"],
+      "correct": 2,
+      "explanation": "Total = 90 worker-hours. Divide by 15."
+    },
+    {
+      "id": 12,
+      "question": "Two towns are 120 km apart. Trains leave simultaneously toward each other at 40 and 80 km/h. Where do they meet from the slower train's town?",
+      "answers": ["80 km", "60 km", "40 km", "30 km"],
+      "correct": 2,
+      "explanation": "Find meeting time first, then distance traveled by slower train."
+    },
+    {
+      "id": 13,
+      "question": "A swimming pool has two drains. One empties it in 4 hours, the other in 6 hours. Both open, how long?",
+      "answers": ["2 hours", "5 hours", "2.4 hours", "3 hours"],
+      "correct": 2,
+      "explanation": "Add rates: 1/4 + 1/6. Both draining speeds up the process."
+    },
+    {
+      "id": 14,
+      "question": "6 cooks prepare meals in 5 hours. How long for 10 cooks?",
+      "answers": ["8.3 hours", "3 hours", "4 hours", "2 hours"],
+      "correct": 1,
+      "explanation": "Total = 30 cook-hours. Divide by 10."
+    },
+    {
+      "id": 15,
+      "question": "A plane flies 600 km with wind in 2 hours. Against the same wind, it takes 3 hours. What's the wind speed?",
+      "answers": ["100 km/h", "50 km/h", "75 km/h", "25 km/h"],
+      "correct": 1,
+      "explanation": "With wind: plane+wind = 300. Against: plane-wind = 200. Solve."
+    },
+    {
+      "id": 16,
+      "question": "3 taps fill a tank in 6 hours. How long for 2 taps?",
+      "answers": ["4 hours", "8 hours", "9 hours", "12 hours"],
+      "correct": 2,
+      "explanation": "Total = 18 tap-hours. Divide by 2."
+    },
+    {
+      "id": 17,
+      "question": "A runner does 5 km at 10 km/h, then 5 km at 15 km/h. What's the average speed for 10 km?",
+      "answers": ["12.5 km/h", "12 km/h", "10 km/h", "11 km/h"],
+      "correct": 1,
+      "explanation": "Find total time: 0.5 + 0.333... hours. Average = 10 ÷ total time."
+    },
+    {
+      "id": 18,
+      "question": "A bucket fills in 8 minutes from a tap. With a hole, it takes 12 minutes. Tap off, how long to empty through the hole?",
+      "answers": ["4 minutes", "20 minutes", "24 minutes", "16 minutes"],
+      "correct": 2,
+      "explanation": "Hole rate = tap rate - net rate = 1/8 - 1/12."
+    },
+    {
+      "id": 19,
+      "question": "15 workers finish in 4 hours. How long for 12 workers?",
+      "answers": ["3.2 hours", "5 hours", "6 hours", "4.8 hours"],
+      "correct": 1,
+      "explanation": "Total = 60 worker-hours. Divide by 12."
+    },
+    {
+      "id": 20,
+      "question": "Two cyclists start 100 km apart, cycling toward each other at 20 km/h and 30 km/h. How far does the faster one travel before they meet?",
+      "answers": ["40 km", "60 km", "50 km", "70 km"],
+      "correct": 1,
+      "explanation": "Meeting time = 100 ÷ 50 = 2 hours. Faster travels 30 × 2."
+    },
+    {
+      "id": 21,
+      "question": "Pipe A fills in 10 hours, pipe B in 15 hours. Both run for 3 hours, then A stops. How much longer for B alone?",
+      "answers": ["7.5 hours", "6 hours", "9 hours", "5 hours"],
+      "correct": 0,
+      "explanation": "In 3 hours both fill 3/10 + 3/15 = 1/2. B fills remaining 1/2."
+    },
+    {
+      "id": 22,
+      "question": "A car travels 180 km, half at 60 km/h and half at 90 km/h. What's the total time?",
+      "answers": ["3.5 hours", "2.5 hours", "3 hours", "2 hours"],
+      "correct": 1,
+      "explanation": "90 km at 60 km/h = 1.5h. 90 km at 90 km/h = 1h. Total = 2.5h."
+    },
+    {
+      "id": 23,
+      "question": "8 bakers bake pies in 9 hours. How long for 12 bakers?",
+      "answers": ["13.5 hours", "4 hours", "6 hours", "5 hours"],
+      "correct": 2,
+      "explanation": "Total = 72 baker-hours. Divide by 12."
+    },
+    {
+      "id": 24,
+      "question": "Water flows into a tank at 50 liters/minute and out at 30 liters/minute. How long to add 400 liters net?",
+      "answers": ["8 minutes", "20 minutes", "13.3 minutes", "40 minutes"],
+      "correct": 1,
+      "explanation": "Net rate = 50 - 30 = 20 liters/min. Time = 400 ÷ 20."
+    },
+    {
+      "id": 25,
+      "question": "A boat goes 24 km downstream in 2 hours and returns in 3 hours. What's the boat's speed in still water?",
+      "answers": ["10 km/h", "8 km/h", "12 km/h", "6 km/h"],
+      "correct": 0,
+      "explanation": "Downstream = 12 km/h, upstream = 8 km/h. Boat speed = average."
+    },
+    {
+      "id": 26,
+      "question": "6 machines run for 8 hours. How long for 4 machines to do the same work?",
+      "answers": ["5.3 hours", "10 hours", "12 hours", "16 hours"],
+      "correct": 2,
+      "explanation": "Total = 48 machine-hours. Divide by 4."
+    },
+    {
+      "id": 27,
+      "question": "Two cars start from the same point. One goes north at 40 km/h, other goes east at 30 km/h. Distance apart after 2 hours?",
+      "answers": ["140 km", "70 km", "100 km", "50 km"],
+      "correct": 2,
+      "explanation": "Use Pythagorean theorem: √(80² + 60²)."
+    },
+    {
+      "id": 28,
+      "question": "A cistern has two inlet pipes filling in 3 and 4 hours, and a drain emptying in 6 hours. All open, how long to fill?",
+      "answers": ["2 hours", "4 hours", "2.4 hours", "3 hours"],
+      "correct": 2,
+      "explanation": "Net rate = 1/3 + 1/4 - 1/6. Find common denominator."
+    },
+    {
+      "id": 29,
+      "question": "9 workers finish 3/4 of a job in 6 hours. How many workers to finish the rest in 2 hours?",
+      "answers": ["3 workers", "6 workers", "4 workers", "9 workers"],
+      "correct": 0,
+      "explanation": "Find work rate, then calculate workers needed for 1/4 in 2 hours."
+    },
+    {
+      "id": 30,
+      "question": "A train 200m long passes a 300m platform in 25 seconds. What's the train's speed?",
+      "answers": ["20 m/s", "12 m/s", "8 m/s", "72 km/h"],
+      "correct": 0,
+      "explanation": "Train travels its length + platform length. Speed = 500 ÷ 25."
+    },
+    {
+      "id": 31,
+      "question": "5 gardeners landscape in 24 hours. How long for 8 gardeners?",
+      "answers": ["15 hours", "38.4 hours", "12 hours", "20 hours"],
+      "correct": 0,
+      "explanation": "Total = 120 gardener-hours. Divide by 8."
+    },
+    {
+      "id": 32,
+      "question": "A faucet fills a tub in 6 minutes. The drain empties it in 8 minutes. Starting empty with both open, how long to fill?",
+      "answers": ["48 minutes", "7 minutes", "24 minutes", "14 minutes"],
+      "correct": 2,
+      "explanation": "Net rate = 1/6 - 1/8. Find time from net rate."
+    },
+    {
+      "id": 33,
+      "question": "Car A leaves at 8 AM at 40 km/h. Car B leaves at 10 AM at 60 km/h on the same route. When does B overtake A?",
+      "answers": ["12 PM", "2 PM", "1 PM", "4 PM"],
+      "correct": 1,
+      "explanation": "A has 80 km head start. B gains 20 km/h. Catch-up time = 80 ÷ 20 = 4 hours after 10 AM."
+    },
+    {
+      "id": 34,
+      "question": "12 installers work for 5 hours. How long for 15 installers?",
+      "answers": ["6.25 hours", "3 hours", "4 hours", "8 hours"],
+      "correct": 2,
+      "explanation": "Total = 60 installer-hours. Divide by 15."
+    },
+    {
+      "id": 35,
+      "question": "A pool fills in 5 hours. After 2 hours, a drain opens that would empty a full pool in 10 hours. How much longer to fill?",
+      "answers": ["3 hours", "6 hours", "4 hours", "5 hours"],
+      "correct": 1,
+      "explanation": "2/5 filled. Remaining 3/5 at net rate (1/5 - 1/10) = 1/10 per hour."
+    },
+    {
+      "id": 36,
+      "question": "Two trains, 150 km apart, travel toward each other at 40 and 60 km/h. A fly flies back and forth between them at 80 km/h until they meet. How far does the fly travel?",
+      "answers": ["120 km", "80 km", "150 km", "200 km"],
+      "correct": 0,
+      "explanation": "Trains meet in 150 ÷ 100 = 1.5 hours. Fly travels 80 × 1.5."
+    },
+    {
+      "id": 37,
+      "question": "6 packers pack boxes in 7 hours. How long for 3 packers?",
+      "answers": ["3.5 hours", "10 hours", "14 hours", "21 hours"],
+      "correct": 2,
+      "explanation": "Half the packers = double the time."
+    },
+    {
+      "id": 38,
+      "question": "A hose fills a tank in 15 hours. A pump empties it in 10 hours. Both on, what happens?",
+      "answers": ["Fills in 30 hours", "Empties in 30 hours", "Fills in 6 hours", "Empties in 6 hours"],
+      "correct": 1,
+      "explanation": "Net rate = 1/15 - 1/10 = -1/30. Negative means emptying."
+    },
+    {
+      "id": 39,
+      "question": "10 farmers plant seeds in 9 hours. How long for 6 farmers?",
+      "answers": ["5.4 hours", "15 hours", "12 hours", "18 hours"],
+      "correct": 1,
+      "explanation": "Total = 90 farmer-hours. Divide by 6."
+    },
+    {
+      "id": 40,
+      "question": "A and B walk toward each other from 30 km apart. A walks 4 km/h, B walks 6 km/h. How far from A's start do they meet?",
+      "answers": ["18 km", "12 km", "15 km", "10 km"],
+      "correct": 1,
+      "explanation": "Meeting time = 30 ÷ 10 = 3 hours. A travels 4 × 3 = 12 km."
+    }
+  ]
+}

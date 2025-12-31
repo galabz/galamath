@@ -8,282 +8,282 @@
     {
       "id": 1,
       "question": "What is 3 + 4 × 2?",
-      "answers": ["14", "11", "10", "24"],
-      "correct": 1,
-      "explanation": "Multiply first! 4 × 2 = 8, then add 3. So 3 + 8 = 11."
+      "answers": ["11", "14", "10", "9"],
+      "correct": 0,
+      "explanation": "Remember PEMDAS! Which operation should you do first: addition or multiplication?"
     },
     {
       "id": 2,
       "question": "What is 10 - 2 × 3?",
-      "answers": ["24", "4", "16", "6"],
+      "answers": ["24", "4", "6", "8"],
       "correct": 1,
-      "explanation": "Multiply first! 2 × 3 = 6, then subtract from 10. So 10 - 6 = 4."
+      "explanation": "Multiplication comes before subtraction. What is 2 × 3, and then what happens?"
     },
     {
       "id": 3,
       "question": "What is (5 + 3) × 2?",
       "answers": ["11", "13", "16", "10"],
       "correct": 2,
-      "explanation": "Parentheses first! 5 + 3 = 8, then multiply by 2. So 8 × 2 = 16."
+      "explanation": "Parentheses come first! Solve what's inside the parentheses, then multiply."
     },
     {
       "id": 4,
       "question": "What is 12 ÷ 4 + 2?",
-      "answers": ["2", "5", "6", "8"],
-      "correct": 1,
-      "explanation": "Divide first! 12 ÷ 4 = 3, then add 2. So 3 + 2 = 5."
+      "answers": ["2", "6", "4", "5"],
+      "correct": 3,
+      "explanation": "Division before addition. What do you get when you divide first?"
     },
     {
       "id": 5,
       "question": "What is 6 + 8 ÷ 2?",
-      "answers": ["7", "10", "14", "4"],
-      "correct": 1,
-      "explanation": "Divide first! 8 ÷ 2 = 4, then add 6. So 6 + 4 = 10."
+      "answers": ["10", "7", "8", "11"],
+      "correct": 0,
+      "explanation": "Don't go left to right! Which operation has priority here?"
     },
     {
       "id": 6,
       "question": "What is 2 × 3 + 4 × 5?",
       "answers": ["50", "26", "70", "46"],
       "correct": 1,
-      "explanation": "Multiply first! 2 × 3 = 6 and 4 × 5 = 20, then add. So 6 + 20 = 26."
+      "explanation": "Do all multiplications first, then add the results together."
     },
     {
       "id": 7,
       "question": "What is (10 - 4) × 3?",
-      "answers": ["18", "22", "6", "2"],
-      "correct": 0,
-      "explanation": "Parentheses first! 10 - 4 = 6, then multiply by 3. So 6 × 3 = 18."
+      "answers": ["22", "6", "18", "24"],
+      "correct": 2,
+      "explanation": "What's inside the parentheses? Solve that first, then multiply."
     },
     {
       "id": 8,
       "question": "What is 20 - 3 × 5?",
-      "answers": ["85", "5", "35", "17"],
-      "correct": 1,
-      "explanation": "Multiply first! 3 × 5 = 15, then subtract from 20. So 20 - 15 = 5."
+      "answers": ["85", "25", "10", "5"],
+      "correct": 3,
+      "explanation": "Multiplication before subtraction! Don't subtract first."
     },
     {
       "id": 9,
       "question": "What is 4 + 6 ÷ 3?",
-      "answers": ["6", "2", "10", "12"],
+      "answers": ["6", "2", "8", "3"],
       "correct": 0,
-      "explanation": "Divide first! 6 ÷ 3 = 2, then add 4. So 4 + 2 = 6."
+      "explanation": "Division has priority over addition. Divide first, then add."
     },
     {
       "id": 10,
       "question": "What is (8 + 2) ÷ 5?",
-      "answers": ["4", "2", "10", "6"],
+      "answers": ["4", "2", "3", "6"],
       "correct": 1,
-      "explanation": "Parentheses first! 8 + 2 = 10, then divide by 5. So 10 ÷ 5 = 2."
+      "explanation": "Parentheses first! Add what's inside, then divide by 5."
     },
     {
       "id": 11,
       "question": "What is 15 - 10 ÷ 2?",
-      "answers": ["2.5", "10", "5", "7.5"],
-      "correct": 1,
-      "explanation": "Divide first! 10 ÷ 2 = 5, then subtract from 15. So 15 - 5 = 10."
+      "answers": ["2", "5", "10", "12"],
+      "correct": 2,
+      "explanation": "Don't subtract first! Division comes before subtraction."
     },
     {
       "id": 12,
       "question": "What is 3 × (4 + 2)?",
-      "answers": ["14", "18", "10", "24"],
-      "correct": 1,
-      "explanation": "Parentheses first! 4 + 2 = 6, then multiply by 3. So 3 × 6 = 18."
+      "answers": ["14", "10", "24", "18"],
+      "correct": 3,
+      "explanation": "Solve the parentheses first. What is 4 + 2? Then multiply by 3."
     },
     {
       "id": 13,
       "question": "What is 24 ÷ 6 × 2?",
-      "answers": ["2", "8", "6", "12"],
-      "correct": 1,
-      "explanation": "Go left to right! 24 ÷ 6 = 4, then 4 × 2 = 8."
+      "answers": ["8", "2", "6", "12"],
+      "correct": 0,
+      "explanation": "Same priority, so go left to right. Divide first, then multiply."
     },
     {
       "id": 14,
       "question": "What is 5 + 3 × 2 - 1?",
       "answers": ["15", "10", "12", "14"],
       "correct": 1,
-      "explanation": "Multiply first! 3 × 2 = 6. Then left to right: 5 + 6 - 1 = 10."
+      "explanation": "Multiply first! Then do the addition and subtraction from left to right."
     },
     {
       "id": 15,
       "question": "What is (12 - 8) + 6?",
-      "answers": ["10", "4", "2", "16"],
-      "correct": 0,
-      "explanation": "Parentheses first! 12 - 8 = 4, then add 6. So 4 + 6 = 10."
+      "answers": ["4", "2", "10", "16"],
+      "correct": 2,
+      "explanation": "Parentheses first! What is 12 - 8? Then add 6."
     },
     {
       "id": 16,
       "question": "What is 8 × 2 ÷ 4?",
-      "answers": ["4", "6", "16", "1"],
-      "correct": 0,
-      "explanation": "Go left to right! 8 × 2 = 16, then 16 ÷ 4 = 4."
+      "answers": ["6", "16", "1", "4"],
+      "correct": 3,
+      "explanation": "Same level operations, so work left to right. Multiply, then divide."
     },
     {
       "id": 17,
       "question": "What is 9 + 6 ÷ 3 - 2?",
-      "answers": ["3", "9", "7", "11"],
-      "correct": 1,
-      "explanation": "Divide first! 6 ÷ 3 = 2. Then left to right: 9 + 2 - 2 = 9."
+      "answers": ["9", "3", "7", "11"],
+      "correct": 0,
+      "explanation": "Division first! Then add and subtract from left to right."
     },
     {
       "id": 18,
       "question": "What is (5 × 2) + (3 × 4)?",
       "answers": ["34", "22", "19", "50"],
       "correct": 1,
-      "explanation": "Parentheses first! 5 × 2 = 10 and 3 × 4 = 12, then 10 + 12 = 22."
+      "explanation": "Solve each parentheses first, then add the two results."
     },
     {
       "id": 19,
       "question": "What is 100 ÷ 10 ÷ 2?",
-      "answers": ["50", "5", "20", "10"],
-      "correct": 1,
-      "explanation": "Go left to right! 100 ÷ 10 = 10, then 10 ÷ 2 = 5."
+      "answers": ["50", "20", "5", "10"],
+      "correct": 2,
+      "explanation": "Same level, go left to right. Don't do 10 ÷ 2 first!"
     },
     {
       "id": 20,
       "question": "What is 7 + 3 × (2 + 1)?",
-      "answers": ["30", "16", "12", "24"],
-      "correct": 1,
-      "explanation": "Parentheses first! 2 + 1 = 3. Then multiply: 3 × 3 = 9. Finally: 7 + 9 = 16."
+      "answers": ["30", "12", "24", "16"],
+      "correct": 3,
+      "explanation": "Parentheses first, then multiplication, then addition."
     },
     {
       "id": 21,
       "question": "What is 18 - 12 ÷ 3?",
-      "answers": ["2", "14", "6", "10"],
-      "correct": 1,
-      "explanation": "Divide first! 12 ÷ 3 = 4, then subtract from 18. So 18 - 4 = 14."
+      "answers": ["14", "2", "10", "6"],
+      "correct": 0,
+      "explanation": "Division before subtraction. What is 12 ÷ 3?"
     },
     {
       "id": 22,
       "question": "What is 2 + 2 × 2 + 2?",
       "answers": ["10", "8", "12", "16"],
       "correct": 1,
-      "explanation": "Multiply first! 2 × 2 = 4. Then: 2 + 4 + 2 = 8."
+      "explanation": "Only the middle multiplication happens first. Then add the rest."
     },
     {
       "id": 23,
       "question": "What is (15 - 5) ÷ 2?",
-      "answers": ["5", "10", "7.5", "2.5"],
-      "correct": 0,
-      "explanation": "Parentheses first! 15 - 5 = 10, then divide by 2. So 10 ÷ 2 = 5."
+      "answers": ["7", "10", "5", "3"],
+      "correct": 2,
+      "explanation": "Parentheses first! What is 15 - 5? Then divide."
     },
     {
       "id": 24,
       "question": "What is 4 × 5 - 3 × 2?",
-      "answers": ["34", "14", "26", "8"],
-      "correct": 1,
-      "explanation": "Multiply first! 4 × 5 = 20 and 3 × 2 = 6, then 20 - 6 = 14."
+      "answers": ["34", "26", "8", "14"],
+      "correct": 3,
+      "explanation": "Do both multiplications first, then subtract."
     },
     {
       "id": 25,
       "question": "What is 36 ÷ (6 - 3)?",
-      "answers": ["9", "12", "6", "15"],
-      "correct": 1,
-      "explanation": "Parentheses first! 6 - 3 = 3, then divide. So 36 ÷ 3 = 12."
+      "answers": ["12", "9", "6", "15"],
+      "correct": 0,
+      "explanation": "Parentheses first! What is 6 - 3? Then divide 36 by that."
     },
     {
       "id": 26,
       "question": "What is 8 - 4 + 2?",
       "answers": ["2", "6", "10", "4"],
       "correct": 1,
-      "explanation": "Same level, go left to right! 8 - 4 = 4, then 4 + 2 = 6."
+      "explanation": "Same level operations. Go left to right: subtract, then add."
     },
     {
       "id": 27,
       "question": "What is 5 × (8 - 3)?",
-      "answers": ["25", "37", "20", "40"],
-      "correct": 0,
-      "explanation": "Parentheses first! 8 - 3 = 5, then multiply. So 5 × 5 = 25."
+      "answers": ["37", "20", "25", "40"],
+      "correct": 2,
+      "explanation": "Parentheses first! What is 8 - 3? Then multiply by 5."
     },
     {
       "id": 28,
       "question": "What is 16 ÷ 4 + 12 ÷ 3?",
-      "answers": ["8", "6", "10", "2"],
-      "correct": 0,
-      "explanation": "Divide first! 16 ÷ 4 = 4 and 12 ÷ 3 = 4, then 4 + 4 = 8."
+      "answers": ["6", "10", "2", "8"],
+      "correct": 3,
+      "explanation": "Do both divisions first, then add the results."
     },
     {
       "id": 29,
       "question": "What is (3 + 7) × (2 + 3)?",
       "answers": ["50", "25", "75", "30"],
       "correct": 0,
-      "explanation": "Parentheses first! 3 + 7 = 10 and 2 + 3 = 5, then 10 × 5 = 50."
+      "explanation": "Solve both parentheses first, then multiply the results."
     },
     {
       "id": 30,
       "question": "What is 30 - 5 × 4?",
       "answers": ["100", "10", "50", "20"],
       "correct": 1,
-      "explanation": "Multiply first! 5 × 4 = 20, then subtract from 30. So 30 - 20 = 10."
+      "explanation": "Multiplication before subtraction! What is 5 × 4?"
     },
     {
       "id": 31,
       "question": "What is 6 × 6 ÷ 9?",
-      "answers": ["4", "6", "9", "3"],
-      "correct": 0,
-      "explanation": "Go left to right! 6 × 6 = 36, then 36 ÷ 9 = 4."
+      "answers": ["6", "9", "4", "3"],
+      "correct": 2,
+      "explanation": "Same level, go left to right. Multiply first, then divide."
     },
     {
       "id": 32,
       "question": "What is 1 + 2 × 3 + 4?",
-      "answers": ["21", "11", "15", "13"],
-      "correct": 1,
-      "explanation": "Multiply first! 2 × 3 = 6. Then: 1 + 6 + 4 = 11."
+      "answers": ["21", "15", "13", "11"],
+      "correct": 3,
+      "explanation": "Only the multiplication happens first. Then add all the numbers."
     },
     {
       "id": 33,
       "question": "What is (20 + 4) ÷ 6?",
       "answers": ["4", "8", "6", "12"],
       "correct": 0,
-      "explanation": "Parentheses first! 20 + 4 = 24, then divide by 6. So 24 ÷ 6 = 4."
+      "explanation": "Add inside the parentheses first, then divide."
     },
     {
       "id": 34,
       "question": "What is 10 - 2 + 8 ÷ 2?",
       "answers": ["8", "12", "6", "10"],
       "correct": 1,
-      "explanation": "Divide first! 8 ÷ 2 = 4. Then left to right: 10 - 2 + 4 = 12."
+      "explanation": "Division first! Then add and subtract from left to right."
     },
     {
       "id": 35,
       "question": "What is 3 × 3 × 3?",
-      "answers": ["9", "27", "18", "12"],
-      "correct": 1,
-      "explanation": "Go left to right! 3 × 3 = 9, then 9 × 3 = 27."
+      "answers": ["9", "18", "27", "12"],
+      "correct": 2,
+      "explanation": "Multiply left to right. 3 × 3 = 9, then 9 × what?"
     },
     {
       "id": 36,
       "question": "What is 40 ÷ (4 + 4)?",
-      "answers": ["5", "8", "10", "6"],
-      "correct": 0,
-      "explanation": "Parentheses first! 4 + 4 = 8, then divide. So 40 ÷ 8 = 5."
+      "answers": ["8", "10", "6", "5"],
+      "correct": 3,
+      "explanation": "Parentheses first! What is 4 + 4? Then divide 40 by that."
     },
     {
       "id": 37,
       "question": "What is 7 × 2 - 3 × 3?",
       "answers": ["5", "15", "12", "3"],
       "correct": 0,
-      "explanation": "Multiply first! 7 × 2 = 14 and 3 × 3 = 9, then 14 - 9 = 5."
+      "explanation": "Do both multiplications first, then subtract."
     },
     {
       "id": 38,
       "question": "What is 25 - 15 + 10?",
       "answers": ["0", "20", "10", "30"],
       "correct": 1,
-      "explanation": "Same level, go left to right! 25 - 15 = 10, then 10 + 10 = 20."
+      "explanation": "Same level, go left to right. Subtract first, then add."
     },
     {
       "id": 39,
       "question": "What is (6 × 4) ÷ (2 × 3)?",
-      "answers": ["4", "2", "8", "6"],
-      "correct": 0,
-      "explanation": "Parentheses first! 6 × 4 = 24 and 2 × 3 = 6, then 24 ÷ 6 = 4."
+      "answers": ["2", "8", "4", "6"],
+      "correct": 2,
+      "explanation": "Solve both parentheses first, then divide."
     },
     {
       "id": 40,
       "question": "What is 50 - 10 × 3 + 5?",
-      "answers": ["125", "25", "15", "35"],
-      "correct": 1,
-      "explanation": "Multiply first! 10 × 3 = 30. Then left to right: 50 - 30 + 5 = 25."
+      "answers": ["125", "15", "35", "25"],
+      "correct": 3,
+      "explanation": "Multiplication first! Then do subtraction and addition left to right."
     }
   ]
 }

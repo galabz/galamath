@@ -20,6 +20,7 @@ interface ResultPayload {
     correctAnswer: number;
     timeSpent: number;
   }[];
+  round?: number;
 }
 
 export async function POST(request: NextRequest) {
@@ -62,25 +63,59 @@ export async function POST(request: NextRequest) {
         .join("\n\n");
 
       try {
-        await resend.emails.send({
-          from: "Galamath <onboarding@resend.dev>",
-          to: notificationEmail,
-          subject: `[Galamath] ${body.userName} completed ${body.themeName} - ${successRate}%`,
-          text: `
+        // Only send attempt email if not a perfect score
+        // Perfect scores get a special success email instead
+        const isPerfectScore = body.score === body.totalQuestions;
+
+        if (!isPerfectScore) {
+          // Regular attempt email (with mistakes)
+          await resend.emails.send({
+            from: "Galamath <onboarding@resend.dev>",
+            to: notificationEmail,
+            subject: `[Galamath] ${body.userName} completed ${body.themeName} - ${successRate}%`,
+            text: `
 Quiz Results for ${body.userName}
 ================================
 
 Theme: ${body.themeName}
 Score: ${body.score}/${body.totalQuestions} (${successRate}%)
+Round: ${body.round || 1}
 Total Time: ${totalMinutes}m ${totalSeconds}s
 Average Time per Question: ${avgTime}s
 
-${body.mistakes.length > 0 ? `Mistakes (${body.mistakes.length}):\n\n${mistakesList}` : "Perfect score! No mistakes!"}
+Mistakes (${body.mistakes.length}):
+
+${mistakesList}
 
 ---
 Galamath Quiz App
-          `.trim(),
-        });
+            `.trim(),
+          });
+        } else {
+          // Success email - perfect score achieved!
+          const round = body.round || 1;
+          await resend.emails.send({
+            from: "Galamath <onboarding@resend.dev>",
+            to: notificationEmail,
+            subject: `[Galamath] ${body.userName} achieved PERFECT SCORE on ${body.themeName}!`,
+            text: `
+PERFECT SCORE!
+================================
+
+${body.userName} has successfully completed ${body.themeName} with a perfect score!
+
+Score: ${body.score}/${body.totalQuestions} (100%)
+Rounds needed: ${round}
+Total Time: ${totalMinutes}m ${totalSeconds}s
+Average Time per Question: ${avgTime}s
+
+${round === 1 ? "Amazing! First try success!" : `Completed after ${round} rounds of practice.`}
+
+---
+Galamath Quiz App
+            `.trim(),
+          });
+        }
       } catch (emailError) {
         console.error("Email error (continuing):", emailError);
       }

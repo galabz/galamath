@@ -8,282 +8,282 @@
     {
       "id": 1,
       "question": "What is 5 + 3 × 4 - 2?",
-      "answers": ["30", "15", "21", "10"],
-      "correct": 1,
-      "explanation": "Multiply first: 3 × 4 = 12. Then left to right: 5 + 12 - 2 = 15."
+      "answers": ["15", "30", "21", "10"],
+      "correct": 0,
+      "explanation": "Which operation has the highest priority here? Handle that first!"
     },
     {
       "id": 2,
       "question": "What is 24 ÷ (3 + 5) × 2?",
-      "answers": ["6", "8", "4", "12"],
-      "correct": 0,
-      "explanation": "Parentheses first: 3 + 5 = 8. Then left to right: 24 ÷ 8 = 3, then 3 × 2 = 6."
+      "answers": ["8", "6", "4", "12"],
+      "correct": 1,
+      "explanation": "Parentheses first, then work left to right for division and multiplication."
     },
     {
       "id": 3,
       "question": "What is 15 - 3 × 2 + 8 ÷ 4?",
-      "answers": ["8", "11", "6", "14"],
-      "correct": 1,
-      "explanation": "Multiply and divide first: 3 × 2 = 6, 8 ÷ 4 = 2. Then: 15 - 6 + 2 = 11."
+      "answers": ["8", "6", "11", "14"],
+      "correct": 2,
+      "explanation": "Handle both multiplication and division first, then add and subtract left to right."
     },
     {
       "id": 4,
       "question": "What is (12 - 4) × (6 + 2)?",
-      "answers": ["64", "56", "48", "72"],
-      "correct": 0,
-      "explanation": "Parentheses first: 12 - 4 = 8, 6 + 2 = 8. Then: 8 × 8 = 64."
+      "answers": ["56", "48", "72", "64"],
+      "correct": 3,
+      "explanation": "Solve both parentheses first. What do you get when you multiply those results?"
     },
     {
       "id": 5,
       "question": "What is 36 ÷ 6 + 4 × 5 - 3?",
       "answers": ["23", "27", "20", "33"],
       "correct": 0,
-      "explanation": "Divide and multiply first: 36 ÷ 6 = 6, 4 × 5 = 20. Then: 6 + 20 - 3 = 23."
+      "explanation": "Division and multiplication have equal priority. Do them first, left to right."
     },
     {
       "id": 6,
       "question": "What is 7 × (9 - 4) + 12 ÷ 3?",
-      "answers": ["39", "35", "41", "45"],
-      "correct": 0,
-      "explanation": "Parentheses first: 9 - 4 = 5. Then: 7 × 5 = 35, 12 ÷ 3 = 4. Finally: 35 + 4 = 39."
+      "answers": ["35", "39", "41", "45"],
+      "correct": 1,
+      "explanation": "Parentheses first! Then multiply and divide, then add."
     },
     {
       "id": 7,
       "question": "What is 100 - 8 × 10 + 15?",
-      "answers": ["35", "25", "115", "5"],
-      "correct": 0,
-      "explanation": "Multiply first: 8 × 10 = 80. Then: 100 - 80 + 15 = 35."
+      "answers": ["25", "115", "35", "5"],
+      "correct": 2,
+      "explanation": "Multiplication before addition and subtraction. What is 8 × 10?"
     },
     {
       "id": 8,
       "question": "What is (5 + 7) × 3 - (8 - 2)?",
-      "answers": ["30", "36", "24", "42"],
-      "correct": 0,
-      "explanation": "Parentheses first: 5 + 7 = 12, 8 - 2 = 6. Then: 12 × 3 = 36, 36 - 6 = 30."
+      "answers": ["36", "24", "42", "30"],
+      "correct": 3,
+      "explanation": "Solve both sets of parentheses first, then multiply, then subtract."
     },
     {
       "id": 9,
       "question": "What is 48 ÷ 8 ÷ 2 × 3?",
       "answers": ["9", "6", "12", "3"],
       "correct": 0,
-      "explanation": "Left to right: 48 ÷ 8 = 6, 6 ÷ 2 = 3, 3 × 3 = 9."
+      "explanation": "All same level - work strictly left to right!"
     },
     {
       "id": 10,
       "question": "What is 6 + 4 × (10 - 3) - 5?",
-      "answers": ["29", "25", "35", "33"],
-      "correct": 0,
-      "explanation": "Parentheses first: 10 - 3 = 7. Then: 4 × 7 = 28. Finally: 6 + 28 - 5 = 29."
+      "answers": ["25", "29", "35", "33"],
+      "correct": 1,
+      "explanation": "Parentheses first, then multiplication, then addition and subtraction."
     },
     {
       "id": 11,
       "question": "What is 72 ÷ (4 + 5) + 7 × 2?",
-      "answers": ["22", "18", "26", "30"],
-      "correct": 0,
-      "explanation": "Parentheses first: 4 + 5 = 9. Then: 72 ÷ 9 = 8, 7 × 2 = 14. Finally: 8 + 14 = 22."
+      "answers": ["18", "26", "22", "30"],
+      "correct": 2,
+      "explanation": "Parentheses first! Then handle division and multiplication before adding."
     },
     {
       "id": 12,
       "question": "What is 3 × 3 + 4 × 4 - 5?",
-      "answers": ["20", "25", "15", "30"],
-      "correct": 0,
-      "explanation": "Multiply first: 3 × 3 = 9, 4 × 4 = 16. Then: 9 + 16 - 5 = 20."
+      "answers": ["25", "15", "30", "20"],
+      "correct": 3,
+      "explanation": "Do both multiplications first, then add, then subtract."
     },
     {
       "id": 13,
       "question": "What is 50 - (12 + 8) × 2?",
       "answers": ["10", "20", "80", "30"],
       "correct": 0,
-      "explanation": "Parentheses first: 12 + 8 = 20. Then: 20 × 2 = 40. Finally: 50 - 40 = 10."
+      "explanation": "Parentheses first, then multiply, then subtract from 50."
     },
     {
       "id": 14,
       "question": "What is 9 × 6 ÷ 3 + 7?",
-      "answers": ["25", "18", "21", "27"],
-      "correct": 0,
-      "explanation": "Left to right for × and ÷: 9 × 6 = 54, 54 ÷ 3 = 18. Then: 18 + 7 = 25."
+      "answers": ["18", "25", "21", "27"],
+      "correct": 1,
+      "explanation": "Multiply and divide left to right first, then add."
     },
     {
       "id": 15,
       "question": "What is (15 - 6) × (4 + 2) ÷ 9?",
-      "answers": ["6", "9", "3", "12"],
-      "correct": 0,
-      "explanation": "Parentheses first: 15 - 6 = 9, 4 + 2 = 6. Then: 9 × 6 = 54, 54 ÷ 9 = 6."
+      "answers": ["9", "3", "6", "12"],
+      "correct": 2,
+      "explanation": "Solve both parentheses, then multiply, then divide."
     },
     {
       "id": 16,
       "question": "What is 8 + 6 × 7 - 20 ÷ 4?",
-      "answers": ["45", "50", "40", "55"],
-      "correct": 0,
-      "explanation": "Multiply and divide first: 6 × 7 = 42, 20 ÷ 4 = 5. Then: 8 + 42 - 5 = 45."
+      "answers": ["50", "40", "55", "45"],
+      "correct": 3,
+      "explanation": "Multiplication and division first! Then add and subtract left to right."
     },
     {
       "id": 17,
       "question": "What is 64 ÷ 8 + 5 × (3 + 1)?",
       "answers": ["28", "24", "32", "36"],
       "correct": 0,
-      "explanation": "Parentheses first: 3 + 1 = 4. Then: 64 ÷ 8 = 8, 5 × 4 = 20. Finally: 8 + 20 = 28."
+      "explanation": "Parentheses first, then division and multiplication, then add."
     },
     {
       "id": 18,
       "question": "What is 11 × 4 - 6 × 6?",
-      "answers": ["8", "14", "0", "20"],
-      "correct": 0,
-      "explanation": "Multiply first: 11 × 4 = 44, 6 × 6 = 36. Then: 44 - 36 = 8."
+      "answers": ["14", "8", "0", "20"],
+      "correct": 1,
+      "explanation": "Do both multiplications first, then find the difference."
     },
     {
       "id": 19,
       "question": "What is (30 - 12) ÷ 6 + 4 × 3?",
-      "answers": ["15", "12", "18", "9"],
-      "correct": 0,
-      "explanation": "Parentheses first: 30 - 12 = 18. Then: 18 ÷ 6 = 3, 4 × 3 = 12. Finally: 3 + 12 = 15."
+      "answers": ["12", "18", "15", "9"],
+      "correct": 2,
+      "explanation": "Parentheses first, then division and multiplication, then add."
     },
     {
       "id": 20,
       "question": "What is 5 × 5 - 3 × 3 + 2 × 2?",
-      "answers": ["20", "16", "24", "12"],
-      "correct": 0,
-      "explanation": "Multiply first: 5 × 5 = 25, 3 × 3 = 9, 2 × 2 = 4. Then: 25 - 9 + 4 = 20."
+      "answers": ["16", "24", "12", "20"],
+      "correct": 3,
+      "explanation": "All three multiplications first, then add and subtract left to right."
     },
     {
       "id": 21,
       "question": "What is 90 ÷ (5 + 4) × 2?",
       "answers": ["20", "18", "36", "10"],
       "correct": 0,
-      "explanation": "Parentheses first: 5 + 4 = 9. Then: 90 ÷ 9 = 10, 10 × 2 = 20."
+      "explanation": "Parentheses first! What is 5 + 4? Then divide and multiply left to right."
     },
     {
       "id": 22,
       "question": "What is 7 + 8 × 3 - 6 ÷ 2?",
-      "answers": ["28", "31", "25", "34"],
-      "correct": 0,
-      "explanation": "Multiply and divide first: 8 × 3 = 24, 6 ÷ 2 = 3. Then: 7 + 24 - 3 = 28."
+      "answers": ["31", "28", "25", "34"],
+      "correct": 1,
+      "explanation": "Multiplication and division before addition and subtraction."
     },
     {
       "id": 23,
       "question": "What is (4 + 6) × (8 - 3) + 5?",
-      "answers": ["55", "45", "50", "60"],
-      "correct": 0,
-      "explanation": "Parentheses first: 4 + 6 = 10, 8 - 3 = 5. Then: 10 × 5 = 50, 50 + 5 = 55."
+      "answers": ["45", "60", "55", "50"],
+      "correct": 2,
+      "explanation": "Both parentheses first, then multiply, then add."
     },
     {
       "id": 24,
       "question": "What is 81 ÷ 9 × 4 - 8?",
-      "answers": ["28", "36", "24", "32"],
-      "correct": 0,
-      "explanation": "Left to right: 81 ÷ 9 = 9, 9 × 4 = 36. Then: 36 - 8 = 28."
+      "answers": ["36", "24", "32", "28"],
+      "correct": 3,
+      "explanation": "Division and multiplication left to right first, then subtract."
     },
     {
       "id": 25,
       "question": "What is 12 × 3 - 4 × 5 + 6?",
       "answers": ["22", "16", "28", "20"],
       "correct": 0,
-      "explanation": "Multiply first: 12 × 3 = 36, 4 × 5 = 20. Then: 36 - 20 + 6 = 22."
+      "explanation": "Both multiplications first, then add and subtract left to right."
     },
     {
       "id": 26,
       "question": "What is (25 - 10) × 4 ÷ 6?",
-      "answers": ["10", "15", "12", "8"],
-      "correct": 0,
-      "explanation": "Parentheses first: 25 - 10 = 15. Then: 15 × 4 = 60, 60 ÷ 6 = 10."
+      "answers": ["15", "10", "8", "12"],
+      "correct": 1,
+      "explanation": "Parentheses first, then multiply and divide left to right."
     },
     {
       "id": 27,
       "question": "What is 6 × 8 - 24 ÷ 3 + 5?",
-      "answers": ["45", "40", "50", "35"],
-      "correct": 0,
-      "explanation": "Multiply and divide first: 6 × 8 = 48, 24 ÷ 3 = 8. Then: 48 - 8 + 5 = 45."
+      "answers": ["40", "50", "45", "35"],
+      "correct": 2,
+      "explanation": "Multiply and divide first, then add and subtract left to right."
     },
     {
       "id": 28,
       "question": "What is 100 - (15 + 25) ÷ 8?",
-      "answers": ["95", "90", "85", "92.5"],
-      "correct": 0,
-      "explanation": "Parentheses first: 15 + 25 = 40. Then: 40 ÷ 8 = 5. Finally: 100 - 5 = 95."
+      "answers": ["90", "85", "92", "95"],
+      "correct": 3,
+      "explanation": "Parentheses first, then divide, then subtract from 100."
     },
     {
       "id": 29,
       "question": "What is 4 × 4 × 2 + 3 × 3?",
       "answers": ["41", "32", "35", "38"],
       "correct": 0,
-      "explanation": "Multiply first: 4 × 4 = 16, 16 × 2 = 32, 3 × 3 = 9. Then: 32 + 9 = 41."
+      "explanation": "All multiplications first, then add the results."
     },
     {
       "id": 30,
       "question": "What is 56 ÷ 7 + 9 × (6 - 2)?",
-      "answers": ["44", "40", "48", "36"],
-      "correct": 0,
-      "explanation": "Parentheses first: 6 - 2 = 4. Then: 56 ÷ 7 = 8, 9 × 4 = 36. Finally: 8 + 36 = 44."
+      "answers": ["40", "44", "48", "36"],
+      "correct": 1,
+      "explanation": "Parentheses first, then division and multiplication, then add."
     },
     {
       "id": 31,
       "question": "What is (18 + 6) ÷ 4 × 5?",
-      "answers": ["30", "24", "36", "20"],
-      "correct": 0,
-      "explanation": "Parentheses first: 18 + 6 = 24. Then: 24 ÷ 4 = 6, 6 × 5 = 30."
+      "answers": ["24", "36", "30", "20"],
+      "correct": 2,
+      "explanation": "Parentheses first, then divide and multiply left to right."
     },
     {
       "id": 32,
       "question": "What is 8 × 9 - 7 × 8?",
-      "answers": ["16", "8", "24", "12"],
-      "correct": 0,
-      "explanation": "Multiply first: 8 × 9 = 72, 7 × 8 = 56. Then: 72 - 56 = 16."
+      "answers": ["8", "24", "12", "16"],
+      "correct": 3,
+      "explanation": "Both multiplications first, then find the difference."
     },
     {
       "id": 33,
       "question": "What is 45 ÷ 5 + 6 × 4 - 10?",
       "answers": ["23", "19", "27", "15"],
       "correct": 0,
-      "explanation": "Divide and multiply first: 45 ÷ 5 = 9, 6 × 4 = 24. Then: 9 + 24 - 10 = 23."
+      "explanation": "Division and multiplication first, then add and subtract left to right."
     },
     {
       "id": 34,
       "question": "What is 3 × (8 + 4) - 2 × 7?",
-      "answers": ["22", "36", "20", "28"],
-      "correct": 0,
-      "explanation": "Parentheses first: 8 + 4 = 12. Then: 3 × 12 = 36, 2 × 7 = 14. Finally: 36 - 14 = 22."
+      "answers": ["36", "22", "20", "28"],
+      "correct": 1,
+      "explanation": "Parentheses first, then both multiplications, then subtract."
     },
     {
       "id": 35,
       "question": "What is 60 ÷ (3 + 2) × 4?",
-      "answers": ["48", "40", "52", "44"],
-      "correct": 0,
-      "explanation": "Parentheses first: 3 + 2 = 5. Then: 60 ÷ 5 = 12, 12 × 4 = 48."
+      "answers": ["40", "52", "48", "44"],
+      "correct": 2,
+      "explanation": "Parentheses first, then divide and multiply left to right."
     },
     {
       "id": 36,
       "question": "What is 9 + 5 × 6 - 3 × 4?",
-      "answers": ["27", "39", "21", "33"],
-      "correct": 0,
-      "explanation": "Multiply first: 5 × 6 = 30, 3 × 4 = 12. Then: 9 + 30 - 12 = 27."
+      "answers": ["33", "21", "39", "27"],
+      "correct": 3,
+      "explanation": "Both multiplications first, then add and subtract left to right."
     },
     {
       "id": 37,
       "question": "What is (7 × 6 - 12) ÷ 5?",
       "answers": ["6", "8", "5", "7"],
       "correct": 0,
-      "explanation": "Parentheses first: 7 × 6 = 42, 42 - 12 = 30. Then: 30 ÷ 5 = 6."
+      "explanation": "Inside the parentheses: multiply first, then subtract. Then divide."
     },
     {
       "id": 38,
       "question": "What is 10 × 7 - 8 × 6 + 4?",
-      "answers": ["26", "22", "30", "18"],
-      "correct": 0,
-      "explanation": "Multiply first: 10 × 7 = 70, 8 × 6 = 48. Then: 70 - 48 + 4 = 26."
+      "answers": ["22", "26", "30", "18"],
+      "correct": 1,
+      "explanation": "Both multiplications first, then add and subtract left to right."
     },
     {
       "id": 39,
       "question": "What is 84 ÷ 12 + 5 × (9 - 3)?",
-      "answers": ["37", "42", "30", "35"],
-      "correct": 0,
-      "explanation": "Parentheses first: 9 - 3 = 6. Then: 84 ÷ 12 = 7, 5 × 6 = 30. Finally: 7 + 30 = 37."
+      "answers": ["42", "30", "37", "35"],
+      "correct": 2,
+      "explanation": "Parentheses first, then division and multiplication, then add."
     },
     {
       "id": 40,
       "question": "What is (11 + 4) × (12 - 8) - 20?",
-      "answers": ["40", "60", "35", "45"],
-      "correct": 0,
-      "explanation": "Parentheses first: 11 + 4 = 15, 12 - 8 = 4. Then: 15 × 4 = 60, 60 - 20 = 40."
+      "answers": ["60", "35", "45", "40"],
+      "correct": 3,
+      "explanation": "Both parentheses first, then multiply, then subtract."
     }
   ]
 }

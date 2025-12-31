@@ -3,9 +3,10 @@
 interface ProgressBarProps {
   current: number;
   total: number;
+  skipped?: number;
 }
 
-export default function ProgressBar({ current, total }: ProgressBarProps) {
+export default function ProgressBar({ current, total, skipped = 0 }: ProgressBarProps) {
   const percentage = ((current + 1) / total) * 100;
 
   return (
@@ -13,6 +14,11 @@ export default function ProgressBar({ current, total }: ProgressBarProps) {
       <div className="mb-2 flex justify-between text-sm font-medium text-gray-600">
         <span>
           Question {current + 1} of {total}
+          {skipped > 0 && (
+            <span className="ml-2 text-orange-500">
+              ({skipped} skipped)
+            </span>
+          )}
         </span>
         <span>{Math.round(percentage)}%</span>
       </div>

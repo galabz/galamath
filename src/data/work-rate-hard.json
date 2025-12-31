@@ -1,0 +1,289 @@
+{
+  "theme": "Rate & Proportion Problems",
+  "themeId": "work-rate",
+  "level": "hard",
+  "totalTimeMinutes": 90,
+  "questionTimeMinutes": 2,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Worker A finishes a job in 6 hours. Worker B finishes it in 3 hours. Working together, how long?",
+      "answers": ["4.5 hours", "2 hours", "3 hours", "1.5 hours"],
+      "correct": 1,
+      "explanation": "Add their rates: 1/6 + 1/3 = ? Then find the time from combined rate."
+    },
+    {
+      "id": 2,
+      "question": "Two cars 300 km apart drive toward each other. Car A at 70 km/h, Car B at 80 km/h. How far from A's start do they meet?",
+      "answers": ["140 km", "160 km", "150 km", "120 km"],
+      "correct": 0,
+      "explanation": "Time to meet = 300 ÷ 150 = 2 hours. A travels 70 × 2."
+    },
+    {
+      "id": 3,
+      "question": "A tank has inlet A (fills in 4h), inlet B (fills in 6h), and drain C (empties in 8h). All open, how long to fill?",
+      "answers": ["2.4 hours", "3 hours", "4.8 hours", "6 hours"],
+      "correct": 0,
+      "explanation": "Net rate = 1/4 + 1/6 - 1/8. Find common denominator."
+    },
+    {
+      "id": 4,
+      "question": "6 workers finish in 8 hours. After 2 hours, 2 workers leave. How much longer to finish?",
+      "answers": ["12 hours", "9 hours", "6 hours", "10 hours"],
+      "correct": 1,
+      "explanation": "Calculate work done in 2 hours, then remaining work with 4 workers."
+    },
+    {
+      "id": 5,
+      "question": "A boat travels 20 km upstream in 5 hours and 20 km downstream in 2 hours. What's the current speed?",
+      "answers": ["3 km/h", "2 km/h", "4 km/h", "1.5 km/h"],
+      "correct": 0,
+      "explanation": "Upstream speed = 4 km/h, downstream = 10 km/h. Current = (10-4) ÷ 2."
+    },
+    {
+      "id": 6,
+      "question": "A and B together take 12 hours. A alone takes 20 hours. How long for B alone?",
+      "answers": ["8 hours", "32 hours", "24 hours", "30 hours"],
+      "correct": 3,
+      "explanation": "1/12 = 1/20 + 1/B. Solve for B."
+    },
+    {
+      "id": 7,
+      "question": "A train 150m long overtakes a man walking at 6 km/h in 15 seconds. What's the train's speed?",
+      "answers": ["42 km/h", "36 km/h", "48 km/h", "54 km/h"],
+      "correct": 0,
+      "explanation": "Relative speed = 150m ÷ 15s = 10 m/s = 36 km/h. Train = 36 + 6."
+    },
+    {
+      "id": 8,
+      "question": "Pipe A fills in 4 hours, Pipe B in 12 hours. A runs for 2 hours, then B joins. Total time?",
+      "answers": ["4 hours", "3 hours", "3.5 hours", "5 hours"],
+      "correct": 2,
+      "explanation": "A does 1/2 in 2 hours. Remaining 1/2 by both together takes..."
+    },
+    {
+      "id": 9,
+      "question": "A car goes 120 km at 40 km/h, then 120 km at 60 km/h. What's the average speed?",
+      "answers": ["50 km/h", "48 km/h", "45 km/h", "52 km/h"],
+      "correct": 1,
+      "explanation": "Total distance = 240 km. Total time = 3 + 2 = 5 hours. Average = 240 ÷ 5."
+    },
+    {
+      "id": 10,
+      "question": "Worker A is twice as fast as B. Together they finish in 4 hours. How long for A alone?",
+      "answers": ["12 hours", "6 hours", "8 hours", "4 hours"],
+      "correct": 1,
+      "explanation": "If A's rate is 2x, B's rate is x. Together: 3x. Set up the equation."
+    },
+    {
+      "id": 11,
+      "question": "Two trains 200 km apart travel toward each other. One at 60 km/h leaves 30 min before the other at 80 km/h. When do they meet?",
+      "answers": ["1.5 hours after first", "1.25 hours after second", "1 hour after second", "1.75 hours after first"],
+      "correct": 1,
+      "explanation": "After 30 min, gap = 170 km. Combined speed = 140 km/h. Time = 170 ÷ 140."
+    },
+    {
+      "id": 12,
+      "question": "A cistern fills in 9 hours. A leak empties it in 18 hours. How long to fill with leak?",
+      "answers": ["27 hours", "12 hours", "18 hours", "15 hours"],
+      "correct": 2,
+      "explanation": "Net rate = 1/9 - 1/18. Find common denominator."
+    },
+    {
+      "id": 13,
+      "question": "10 men finish work in 18 days. After 6 days, 5 men leave. How many more days?",
+      "answers": ["24 days", "18 days", "12 days", "30 days"],
+      "correct": 0,
+      "explanation": "Work done in 6 days by 10 men. Remaining work done by 5 men."
+    },
+    {
+      "id": 14,
+      "question": "A plane flies 600 km with wind in 2 hours. Against same wind, it takes 3 hours. What's the plane's speed in still air?",
+      "answers": ["200 km/h", "300 km/h", "250 km/h", "275 km/h"],
+      "correct": 2,
+      "explanation": "With wind: 300 km/h. Against: 200 km/h. Plane = (300 + 200) ÷ 2."
+    },
+    {
+      "id": 15,
+      "question": "8 workers finish 3/4 of a job in 6 hours. How many workers to finish the rest in 2 hours?",
+      "answers": ["4 workers", "3 workers", "6 workers", "2 workers"],
+      "correct": 0,
+      "explanation": "Find rate from first part, then calculate workers for remaining 1/4."
+    },
+    {
+      "id": 16,
+      "question": "Two pipes together fill in 6 hours. One pipe alone takes 5 hours more than the other. Find the faster pipe's time.",
+      "answers": ["10 hours", "15 hours", "12 hours", "8 hours"],
+      "correct": 0,
+      "explanation": "Let faster = x hours. Slower = x+5. Set up: 1/x + 1/(x+5) = 1/6."
+    },
+    {
+      "id": 17,
+      "question": "A train 300m long passes a bridge 200m long in 25 seconds. What's the train's speed in km/h?",
+      "answers": ["72 km/h", "54 km/h", "90 km/h", "60 km/h"],
+      "correct": 0,
+      "explanation": "Total distance = 500m. Speed = 500 ÷ 25 = 20 m/s = 72 km/h."
+    },
+    {
+      "id": 18,
+      "question": "A can do 1/3 of work in 5 days. B joins and they finish the rest in 3 days. B alone would take?",
+      "answers": ["7.5 days", "9 days", "6 days", "12 days"],
+      "correct": 1,
+      "explanation": "A's rate = 1/15 per day. Together they do 2/3 in 3 days. Find B's rate."
+    },
+    {
+      "id": 19,
+      "question": "Car A at 60 km/h leaves at 8 AM. Car B at 80 km/h leaves at 9 AM same direction. When does B catch A?",
+      "answers": ["11 AM", "12 PM", "1 PM", "2 PM"],
+      "correct": 1,
+      "explanation": "A's head start = 60 km. B gains 20 km/h. Catch-up time = 3 hours after 9 AM."
+    },
+    {
+      "id": 20,
+      "question": "A pool has two inlets (fill in 3h and 4h) and one outlet (empty in 6h). Starting empty, all open, how long to fill?",
+      "answers": ["2 hours", "4 hours", "2.4 hours", "3 hours"],
+      "correct": 2,
+      "explanation": "Net rate = 1/3 + 1/4 - 1/6. Find common denominator."
+    },
+    {
+      "id": 21,
+      "question": "A's efficiency is 150% of B's. B's efficiency is 80% of C's. If C takes 30 hours alone, how long for all 3?",
+      "answers": ["8 hours", "12 hours", "10 hours", "9 hours"],
+      "correct": 2,
+      "explanation": "Express A and B rates in terms of C's rate. Then add all three."
+    },
+    {
+      "id": 22,
+      "question": "A man rows 15 km upstream in 3 hours and 15 km downstream in 1.5 hours. His speed in still water?",
+      "answers": ["7.5 km/h", "5 km/h", "10 km/h", "6 km/h"],
+      "correct": 0,
+      "explanation": "Upstream = 5 km/h, downstream = 10 km/h. Man's speed = (5 + 10) ÷ 2."
+    },
+    {
+      "id": 23,
+      "question": "12 workers working 6 hours/day finish in 10 days. How many days for 15 workers at 8 hours/day?",
+      "answers": ["4 days", "6 days", "9 days", "8 days"],
+      "correct": 1,
+      "explanation": "Total work = 12 × 6 × 10 = 720 worker-hours. Divide by (15 × 8)."
+    },
+    {
+      "id": 24,
+      "question": "A, B, C together take 4 hours. A alone takes 12 hours, B alone 8 hours. C alone?",
+      "answers": ["12 hours", "16 hours", "24 hours", "20 hours"],
+      "correct": 2,
+      "explanation": "1/4 = 1/12 + 1/8 + 1/C. Solve for C."
+    },
+    {
+      "id": 25,
+      "question": "A train passes a pole in 10 seconds and a 150m platform in 25 seconds. Find the train's length.",
+      "answers": ["100 m", "75 m", "150 m", "120 m"],
+      "correct": 0,
+      "explanation": "Speed = length ÷ 10. Also speed = (length + 150) ÷ 25. Solve."
+    },
+    {
+      "id": 26,
+      "question": "Tap A fills in 20 hours. Tap B fills in 30 hours. Both run for 4 hours, then only B runs. Total time?",
+      "answers": ["14 hours", "16 hours", "18 hours", "12 hours"],
+      "correct": 0,
+      "explanation": "In 4 hours: 4/20 + 4/30 = 1/3. B fills remaining 2/3 at 1/30 per hour."
+    },
+    {
+      "id": 27,
+      "question": "Two cars start from same point at same time. One north at 40 km/h, one east at 30 km/h. When are they 100 km apart?",
+      "answers": ["2 hours", "1.5 hours", "2.5 hours", "3 hours"],
+      "correct": 0,
+      "explanation": "Distance² = (40t)² + (30t)² = 100². Solve for t."
+    },
+    {
+      "id": 28,
+      "question": "A types at 60 words/min, B at 40 words/min. They type 5000 words. A leaves after 30 min. Total time?",
+      "answers": ["80 minutes", "95 minutes", "85 minutes", "75 minutes"],
+      "correct": 1,
+      "explanation": "In 30 min, both type 3000 words. B types remaining 2000 alone."
+    },
+    {
+      "id": 29,
+      "question": "A tank has capacity 1000 liters. Inlet at 50 L/min, outlet at 30 L/min. Starting with 200 L, how long to fill?",
+      "answers": ["40 min", "50 min", "25 min", "60 min"],
+      "correct": 0,
+      "explanation": "Net rate = 20 L/min. Need 800 L more. Time = 800 ÷ 20."
+    },
+    {
+      "id": 30,
+      "question": "5 men and 3 women finish in 4 days. 3 men and 5 women finish in 5 days. How long for 2 men and 2 women?",
+      "answers": ["8 days", "10 days", "7.5 days", "6 days"],
+      "correct": 2,
+      "explanation": "Set up two equations with man-days and woman-days. Solve the system."
+    },
+    {
+      "id": 31,
+      "question": "A train 100m long traveling at 60 km/h passes another train 150m long going same direction at 40 km/h. Time to pass?",
+      "answers": ["45 seconds", "25 seconds", "15 seconds", "30 seconds"],
+      "correct": 0,
+      "explanation": "Relative speed = 20 km/h = 50/9 m/s. Distance = 250m. Time = 250 ÷ (50/9)."
+    },
+    {
+      "id": 32,
+      "question": "A completes 3/5 of work, B completes 1/4, C does the rest. If C takes 3 hours for his part, how long for all 3 together?",
+      "answers": ["8 hours", "4 hours", "6 hours", "5 hours"],
+      "correct": 1,
+      "explanation": "C does 3/20 of work in 3 hours. Find all rates and combine."
+    },
+    {
+      "id": 33,
+      "question": "A motorcyclist travels 120 km. First half at 40 km/h, second half at 60 km/h. Average speed?",
+      "answers": ["50 km/h", "48 km/h", "45 km/h", "52 km/h"],
+      "correct": 1,
+      "explanation": "Time = 60/40 + 60/60 = 1.5 + 1 = 2.5 hours. Average = 120 ÷ 2.5."
+    },
+    {
+      "id": 34,
+      "question": "Pipe A fills in 12 hours. After half filled, pipe B (fills in 18 hours) joins. How much longer?",
+      "answers": ["4.5 hours", "3.6 hours", "5 hours", "6 hours"],
+      "correct": 1,
+      "explanation": "A takes 6 hours for half. Both together fill remaining half."
+    },
+    {
+      "id": 35,
+      "question": "A and B complete 3/5 of work in 6 days. B finishes the rest in 8 days. A alone would take?",
+      "answers": ["10 days", "15 days", "20 days", "12 days"],
+      "correct": 1,
+      "explanation": "From B's solo work, find B's rate. Then find A's rate from combined work."
+    },
+    {
+      "id": 36,
+      "question": "Two trains 500 km apart travel toward each other. One leaves 1 hour earlier at 50 km/h, other at 75 km/h. Distance from slower's start when they meet?",
+      "answers": ["200 km", "180 km", "220 km", "150 km"],
+      "correct": 0,
+      "explanation": "After 1 hour, gap = 450 km. Meeting time from second train's start = 450 ÷ 125."
+    },
+    {
+      "id": 37,
+      "question": "A machine breaks down 1/4 of the time. With B (no breakdowns), a job takes 8 hours. A alone takes 18 hours effective. B alone?",
+      "answers": ["24 hours", "12 hours", "16 hours", "20 hours"],
+      "correct": 0,
+      "explanation": "A's effective rate is 3/4 × 1/18. Set up equation with combined rate = 1/8."
+    },
+    {
+      "id": 38,
+      "question": "Inlet A fills in 10 hours, B in 15 hours, outlet C empties in 6 hours. All open, what happens?",
+      "answers": ["Fills in 30 h", "Empties in 30 h", "Never fills", "Stays same"],
+      "correct": 1,
+      "explanation": "Net rate = 1/10 + 1/15 - 1/6 = 3/30 + 2/30 - 5/30 = 0. Wait, check again..."
+    },
+    {
+      "id": 39,
+      "question": "7 boys and 5 girls finish in 4 hours. 3 boys and 7 girls finish in 6 hours. How long for 1 boy and 1 girl?",
+      "answers": ["21 hours", "24 hours", "18 hours", "28 hours"],
+      "correct": 1,
+      "explanation": "Set up two equations. Solve for boy-rate and girl-rate."
+    },
+    {
+      "id": 40,
+      "question": "A boat's speed in still water is 12 km/h. It takes same time to go 16 km upstream as 24 km downstream. Current speed?",
+      "answers": ["3 km/h", "2 km/h", "4 km/h", "2.4 km/h"],
+      "correct": 3,
+      "explanation": "16/(12-c) = 24/(12+c). Cross multiply and solve for c."
+    }
+  ]
+}

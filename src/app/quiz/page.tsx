@@ -14,11 +14,23 @@ interface QuizState {
   startTime: number;
 }
 
+interface SavedQuizProgress {
+  themeId: string;
+  userId: string;
+  round: number;
+  quizState: QuizState;
+  wrongQuestionIds?: number[];
+}
+
+const QUIZ_PROGRESS_KEY = "quizProgress";
+
 function QuizContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const themeId = searchParams.get("theme");
   const userId = searchParams.get("user");
+  const roundParam = searchParams.get("round");
+  const round = roundParam ? parseInt(roundParam, 10) : 1;
 
   const [user, setUser] = useState<User | null>(null);
   const [quizData, setQuizData] = useState<QuizData | null>(null);
@@ -39,6 +51,26 @@ function QuizContent() {
       return;
     }
 
+    // Check for saved progress
+    const savedProgressStr = localStorage.getItem(QUIZ_PROGRESS_KEY);
+    let savedProgress: SavedQuizProgress | null = null;
+
+    if (savedProgressStr) {
+      try {
+        savedProgress = JSON.parse(savedProgressStr);
+        // Only restore if it matches current quiz
+        if (
+          savedProgress?.themeId !== themeId ||
+          savedProgress?.userId !== userId ||
+          savedProgress?.round !== round
+        ) {
+          savedProgress = null;
+        }
+      } catch {
+        savedProgress = null;
+      }
+    }
+
     // Load users and quiz data
     Promise.all([
       fetch("/api/users").then((res) => res.json()),
@@ -51,25 +83,82 @@ function QuizContent() {
           return;
         }
         setUser(foundUser);
-        setQuizData(quizDataParsed);
-        setQuizState({
-          currentQuestion: 0,
-          answers: new Array(quizDataParsed.questions.length).fill(null),
-          answerTimes: new Array(quizDataParsed.questions.length).fill(0),
-          startTime: Date.now(),
-        });
-        questionStartRef.current = Date.now();
+
+        // In round 2+, filter to only show questions that were answered incorrectly
+        let filteredQuizData = quizDataParsed;
+        if (round > 1) {
+          // Use saved wrong question IDs if available, otherwise from session storage
+          const wrongQuestionIds = savedProgress?.wrongQuestionIds || JSON.parse(
+            sessionStorage.getItem("wrongQuestionIds") || "[]"
+          ) as number[];
+          if (wrongQuestionIds.length > 0) {
+            filteredQuizData = {
+              ...quizDataParsed,
+              questions: quizDataParsed.questions.filter((q: { id: number }) =>
+                wrongQuestionIds.includes(q.id)
+              ),
+            };
+          }
+        }
+
+        setQuizData(filteredQuizData);
+
+        // Restore saved state or create new one
+        if (savedProgress && savedProgress.quizState.answers.length === filteredQuizData.questions.length) {
+          setQuizState(savedProgress.quizState);
+          questionStartRef.current = Date.now();
+        } else {
+          const newState = {
+            currentQuestion: 0,
+            answers: new Array(filteredQuizData.questions.length).fill(null),
+            answerTimes: new Array(filteredQuizData.questions.length).fill(0),
+            startTime: Date.now(),
+          };
+          setQuizState(newState);
+          questionStartRef.current = Date.now();
+
+          // Save initial progress
+          const wrongQuestionIds = round > 1
+            ? JSON.parse(sessionStorage.getItem("wrongQuestionIds") || "[]")
+            : undefined;
+          localStorage.setItem(QUIZ_PROGRESS_KEY, JSON.stringify({
+            themeId,
+            userId,
+            round,
+            quizState: newState,
+            wrongQuestionIds,
+          }));
+        }
+
         setLoading(false);
       })
       .catch(() => {
         router.push("/");
       });
-  }, [themeId, userId, router]);
+  }, [themeId, userId, router, round]);
+
+  // Save progress to localStorage
+  const saveProgress = useCallback((state: QuizState) => {
+    if (!themeId || !userId) return;
+    const wrongQuestionIds = round > 1
+      ? JSON.parse(sessionStorage.getItem("wrongQuestionIds") || "[]")
+      : undefined;
+    localStorage.setItem(QUIZ_PROGRESS_KEY, JSON.stringify({
+      themeId,
+      userId,
+      round,
+      quizState: state,
+      wrongQuestionIds,
+    }));
+  }, [themeId, userId, round]);
 
   const submitResults = useCallback(
     async (finalState: QuizState) => {
       if (!quizData || !user || submitting) return;
       setSubmitting(true);
+
+      // Clear saved progress on submit
+      localStorage.removeItem(QUIZ_PROGRESS_KEY);
 
       const score = finalState.answers.reduce<number>((acc, answer, idx) => {
         return acc + (answer === quizData.questions[idx].correct ? 1 : 0);
@@ -102,8 +191,9 @@ function QuizContent() {
       }));
 
       // Store in session for results page
+      // Use themeId from URL (includes level suffix) not quizData.themeId
       const resultForDisplay = {
-        themeId: quizData.themeId,
+        themeId: themeId,
         themeName: quizData.theme,
         userId: user.id,
         userName: user.name,
@@ -113,6 +203,7 @@ function QuizContent() {
         score,
         totalTime: totalTimeSeconds,
         completedAt: new Date().toISOString(),
+        round,
       };
       sessionStorage.setItem("quizResult", JSON.stringify(resultForDisplay));
 
@@ -124,7 +215,7 @@ function QuizContent() {
           body: JSON.stringify({
             userId: user.id,
             userName: user.name,
-            themeId: quizData.themeId,
+            themeId: themeId,
             themeName: quizData.theme,
             score,
             totalQuestions: quizData.questions.length,
@@ -132,6 +223,7 @@ function QuizContent() {
             avgTimePerQuestion,
             mistakes,
             allAnswers,
+            round,
           }),
         });
       } catch (error) {
@@ -140,7 +232,7 @@ function QuizContent() {
 
       router.push("/results");
     },
-    [quizData, user, router, submitting]
+    [quizData, user, router, submitting, round, themeId]
   );
 
   const handleTimeUp = useCallback(() => {
@@ -159,7 +251,9 @@ function QuizContent() {
     setQuizState((prev) => {
       const newAnswers = [...prev.answers];
       newAnswers[prev.currentQuestion] = answerIndex;
-      return { ...prev, answers: newAnswers };
+      const newState = { ...prev, answers: newAnswers };
+      saveProgress(newState);
+      return newState;
     });
   };
 
@@ -173,11 +267,13 @@ function QuizContent() {
       setQuizState((prev) => {
         const newAnswerTimes = [...prev.answerTimes];
         newAnswerTimes[prev.currentQuestion] = timeSpent;
-        return {
+        const newState = {
           ...prev,
           currentQuestion: prev.currentQuestion + 1,
           answerTimes: newAnswerTimes,
         };
+        saveProgress(newState);
+        return newState;
       });
       questionStartRef.current = Date.now();
       setQuestionKey((k) => k + 1);
@@ -200,16 +296,55 @@ function QuizContent() {
       setQuizState((prev) => {
         const newAnswerTimes = [...prev.answerTimes];
         newAnswerTimes[prev.currentQuestion] += timeSpent;
-        return {
+        const newState = {
           ...prev,
           currentQuestion: prev.currentQuestion - 1,
           answerTimes: newAnswerTimes,
         };
+        saveProgress(newState);
+        return newState;
       });
       questionStartRef.current = Date.now();
       setQuestionKey((k) => k + 1);
     }
   };
+
+  // Guard against empty filtered questions (e.g., all questions answered correctly)
+  // Must be before conditional returns to follow Rules of Hooks
+  useEffect(() => {
+    if (!loading && quizData && quizData.questions.length === 0) {
+      router.push("/results");
+    }
+  }, [loading, quizData, router]);
+
+  // Keyboard shortcuts: A, B, C, D to select answer and move to next
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (loading || submitting || !quizData) return;
+
+      const key = e.key.toLowerCase();
+      const answerMap: Record<string, number> = { a: 0, b: 1, c: 2, d: 3 };
+
+      if (key in answerMap) {
+        const answerIndex = answerMap[key];
+        // Select the answer
+        setQuizState((prev) => {
+          const newAnswers = [...prev.answers];
+          newAnswers[prev.currentQuestion] = answerIndex;
+          const newState = { ...prev, answers: newAnswers };
+          saveProgress(newState);
+          return newState;
+        });
+        // Move to next question after a brief delay
+        setTimeout(() => {
+          handleNext();
+        }, 150);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [loading, submitting, quizData, handleNext, saveProgress]);
 
   if (loading || !quizData || !user) {
     return (
@@ -237,6 +372,17 @@ function QuizContent() {
   const isLastQuestion = quizState.currentQuestion === quizData.questions.length - 1;
   const totalTimeSeconds = quizData.totalTimeMinutes * 60;
   const questionTimeSeconds = quizData.questionTimeMinutes * 60;
+
+  if (!currentQuestion) {
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        <div className="text-center">
+          <div className="mb-4 text-6xl">🧮</div>
+          <p className="text-xl text-gray-600">Redirecting...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="flex min-h-screen flex-col p-4 md:p-8">
@@ -273,16 +419,28 @@ function QuizContent() {
         <ProgressBar
           current={quizState.currentQuestion}
           total={quizData.questions.length}
+          skipped={quizState.answers.slice(0, quizState.currentQuestion).filter(a => a === null).length}
         />
       </div>
 
       {/* Question */}
       <main className="flex-1">
-        <QuestionCard
-          question={currentQuestion}
-          selectedAnswer={quizState.answers[quizState.currentQuestion]}
-          onSelectAnswer={handleSelectAnswer}
-        />
+        <div className="flex flex-col gap-6">
+          {/* Question Card */}
+          <QuestionCard
+            question={currentQuestion}
+            selectedAnswer={quizState.answers[quizState.currentQuestion]}
+            onSelectAnswer={handleSelectAnswer}
+          />
+
+          {/* Explanation - shown by default in round 2+ */}
+          {round > 1 && (
+            <div className="rounded-2xl bg-indigo-50 p-6 shadow-lg md:p-8">
+              <p className="mb-2 text-sm font-medium text-indigo-600">Explanation:</p>
+              <p className="text-lg text-gray-700">{currentQuestion.explanation}</p>
+            </div>
+          )}
+        </div>
       </main>
 
       {/* Navigation */}

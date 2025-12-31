@@ -20,6 +20,12 @@ const themes: Theme[] = [
     description: "Master PEMDAS - Parentheses, Exponents, Multiplication, Division, Addition, Subtraction",
     icon: "🧮",
   },
+  {
+    id: "work-rate",
+    name: "Rate & Proportion",
+    description: "Speed, distance, time, workers, filling tanks, and meeting problems",
+    icon: "🚗",
+  },
 ];
 
 const levels = [
@@ -118,7 +124,7 @@ export default function Home() {
 
       {/* Theme selection */}
       {step === "theme" && (
-        <main className="w-full max-w-md">
+        <main className="grid w-full max-w-2xl grid-cols-1 gap-6 md:grid-cols-2">
           {themes.map((theme) => (
             <button
               key={theme.id}

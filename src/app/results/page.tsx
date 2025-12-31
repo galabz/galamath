@@ -4,7 +4,9 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { QuizResult, User } from "@/lib/types";
 
-const answerLabels = ["A", "B", "C", "D"];
+interface ExtendedQuizResult extends QuizResult {
+  round?: number;
+}
 
 function formatTime(seconds: number): string {
   const hrs = Math.floor(seconds / 3600);
@@ -18,7 +20,7 @@ function formatTime(seconds: number): string {
 
 export default function ResultsPage() {
   const router = useRouter();
-  const [result, setResult] = useState<QuizResult | null>(null);
+  const [result, setResult] = useState<ExtendedQuizResult | null>(null);
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -115,105 +117,66 @@ export default function ResultsPage() {
         </div>
       </div>
 
-      {/* Question review */}
-      <div className="mx-auto max-w-4xl">
-        <h2 className="mb-6 text-2xl font-bold text-gray-800 md:text-3xl">
-          Review Your Answers
-        </h2>
+      {/* Next action */}
+      {(() => {
+        const mistakeCount = result.questions.length - result.score;
+        const isPerfectScore = result.score === result.questions.length;
 
-        <div className="space-y-6">
-          {result.questions.map((question, idx) => {
-            const userAnswer = result.userAnswers[idx];
-            const isCorrect = userAnswer === question.correct;
-            const wasSkipped = userAnswer === null;
-            const timeSpent =
-              result.answerTimes && result.answerTimes[idx]
-                ? result.answerTimes[idx]
-                : null;
-
-            return (
-              <div
-                key={question.id}
-                className={`rounded-2xl p-6 shadow-md ${
-                  isCorrect
-                    ? "border-l-4 border-green-500 bg-green-50"
-                    : "border-l-4 border-red-500 bg-red-50"
-                }`}
-              >
-                <div className="mb-4 flex items-start justify-between gap-4">
-                  <h3 className="text-lg font-semibold text-gray-800 md:text-xl">
-                    {idx + 1}. {question.question}
-                  </h3>
-                  <div className="flex flex-shrink-0 items-center gap-2">
-                    {timeSpent !== null && (
-                      <span className="text-sm text-gray-500">{timeSpent}s</span>
-                    )}
-                    <span
-                      className={`rounded-full px-3 py-1 text-sm font-medium ${
-                        isCorrect
-                          ? "bg-green-200 text-green-800"
-                          : "bg-red-200 text-red-800"
-                      }`}
-                    >
-                      {isCorrect ? "Correct" : wasSkipped ? "Skipped" : "Wrong"}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="mb-4 grid grid-cols-2 gap-2 md:grid-cols-4">
-                  {question.answers.map((answer, ansIdx) => {
-                    const isUserAnswer = userAnswer === ansIdx;
-                    const isCorrectAnswer = question.correct === ansIdx;
-
-                    return (
-                      <div
-                        key={ansIdx}
-                        className={`rounded-xl p-3 text-sm md:text-base ${
-                          isCorrectAnswer
-                            ? "bg-green-200 font-semibold text-green-800"
-                            : isUserAnswer
-                              ? "bg-red-200 text-red-800"
-                              : "bg-white text-gray-600"
-                        }`}
-                      >
-                        <span className="font-bold">{answerLabels[ansIdx]}.</span>{" "}
-                        {answer}
-                        {isCorrectAnswer && " ✓"}
-                        {isUserAnswer && !isCorrectAnswer && " ✗"}
-                      </div>
-                    );
-                  })}
-                </div>
-
-                <div className="rounded-xl bg-white p-4">
-                  <p className="text-sm font-medium text-indigo-600">
-                    Explanation:
-                  </p>
-                  <p className="text-gray-700">{question.explanation}</p>
-                </div>
+        // Perfect score - show celebration
+        if (isPerfectScore) {
+          return (
+            <div className="mx-auto max-w-4xl">
+              <div className="rounded-3xl bg-green-50 p-8 text-center shadow-lg">
+                <div className="mb-4 text-6xl">🎉</div>
+                <h2 className="mb-2 text-3xl font-bold text-green-700">Perfect Score!</h2>
+                <p className="text-lg text-green-600">
+                  Congratulations! You answered all {result.questions.length} questions correctly
+                  {result.round && result.round > 1 && ` in ${result.round} rounds`}!
+                </p>
               </div>
-            );
-          })}
-        </div>
-      </div>
+            </div>
+          );
+        }
 
-      {/* Actions */}
-      <div className="mx-auto mt-8 flex max-w-4xl justify-center gap-4">
-        <button
-          onClick={() => router.push("/")}
-          className="rounded-2xl bg-indigo-600 px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-indigo-700 active:scale-95"
-        >
-          Back to Home
-        </button>
-        <button
-          onClick={() =>
-            router.push(`/quiz?theme=${result.themeId}&user=${result.userId}`)
-          }
-          className="rounded-2xl bg-gray-200 px-8 py-4 text-lg font-semibold text-gray-700 transition-all hover:bg-gray-300 active:scale-95"
-        >
-          Try Again
-        </button>
-      </div>
+        // Not perfect - show big "Round X" button
+        const nextRound = (result.round || 1) + 1;
+
+        // Get IDs of questions that were answered incorrectly
+        const wrongQuestionIds = result.questions
+          .filter((q, idx) => result.userAnswers[idx] !== q.correct)
+          .map((q) => q.id);
+
+        return (
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="mb-8 text-lg text-gray-600">
+              You got {mistakeCount} question{mistakeCount > 1 ? "s" : ""} wrong.
+              Try again to improve your score!
+            </p>
+            <button
+              onClick={() => {
+                // Store wrong question IDs for next round
+                sessionStorage.setItem("wrongQuestionIds", JSON.stringify(wrongQuestionIds));
+                router.push(`/quiz?theme=${result.themeId}&user=${result.userId}&round=${nextRound}`);
+              }}
+              className="rounded-3xl bg-indigo-600 px-16 py-8 text-3xl font-bold text-white shadow-lg transition-all hover:bg-indigo-700 hover:shadow-xl active:scale-95"
+            >
+              Round {nextRound}
+            </button>
+          </div>
+        );
+      })()}
+
+      {/* Actions - only show Back to Home for perfect scores */}
+      {result.score === result.questions.length && (
+        <div className="mx-auto mt-8 flex max-w-4xl justify-center gap-4">
+          <button
+            onClick={() => router.push("/")}
+            className="rounded-2xl bg-indigo-600 px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-indigo-700 active:scale-95"
+          >
+            Back to Home
+          </button>
+        </div>
+      )}
     </div>
   );
 }
