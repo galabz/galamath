@@ -485,5 +485,8 @@
       "correct": 0,
       "hint": "Let Beth's age = B. Amy = B + 5. In 3 years, Amy is (B + 5 + 3). Set this equal to 2B."
     }
+  ],
+  "access": [
+    0
   ]
 }

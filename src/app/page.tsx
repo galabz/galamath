@@ -11,9 +11,22 @@ interface Theme {
   name: string;
   description: string;
   icon: string;
+  access?: number[];
 }
 
 const themes: Theme[] = [
+  {
+    id: "addition",
+    name: "Addition",
+    description: "Practice adding numbers - from simple sums to two-digit addition",
+    icon: "➕",
+  },
+  {
+    id: "subtraction",
+    name: "Subtraction",
+    description: "Practice taking away - from basic subtraction to borrowing",
+    icon: "➖",
+  },
   {
     id: "order-of-operations",
     name: "Order of Operations",
@@ -71,17 +84,35 @@ export default function Home() {
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
   const [selectedTheme, setSelectedTheme] = useState<Theme | null>(null);
   const [loading, setLoading] = useState(true);
+  const [themeAccess, setThemeAccess] = useState<Record<string, number[]>>({});
 
   useEffect(() => {
     // Check if already unlocked
     const isUnlocked = localStorage.getItem("unlocked") === "true";
     setUnlocked(isUnlocked);
 
-    // Load users
-    fetch("/api/users")
-      .then((res) => res.json())
-      .then((data) => {
-        setUsers(data);
+    // Load users and theme access data
+    Promise.all([
+      fetch("/api/users").then((res) => res.json()),
+      // Load access data from each theme's easy level
+      Promise.all(
+        themes.map(async (theme) => {
+          try {
+            const data = await import(`@/data/${theme.id}-easy.json`);
+            return { id: theme.id, access: data.access || data.default?.access || [0] };
+          } catch {
+            return { id: theme.id, access: [0] };
+          }
+        })
+      ),
+    ])
+      .then(([usersData, accessData]) => {
+        setUsers(usersData);
+        const accessMap: Record<string, number[]> = {};
+        accessData.forEach(({ id, access }) => {
+          accessMap[id] = access;
+        });
+        setThemeAccess(accessMap);
         setLoading(false);
       })
       .catch(() => setLoading(false));
@@ -187,25 +218,31 @@ export default function Home() {
       )}
 
       {/* Theme selection */}
-      {step === "theme" && (
+      {step === "theme" && selectedUser && (
         <main className="grid w-full max-w-4xl grid-cols-1 gap-6 md:grid-cols-3">
-          {themes.map((theme) => (
-            <button
-              key={theme.id}
-              onClick={() => setSelectedTheme(theme)}
-              className="flex w-full flex-col items-center gap-4 rounded-3xl bg-white p-8 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl active:scale-95"
-            >
-              <span className="text-6xl">{theme.icon}</span>
-              <div className="text-center">
-                <h2 className="text-xl font-bold text-gray-800 md:text-2xl">
-                  {theme.name}
-                </h2>
-                <p className="mt-2 text-sm text-gray-500 md:text-base">
-                  {theme.description}
-                </p>
-              </div>
-            </button>
-          ))}
+          {themes
+            .filter((theme) => {
+              const userIndex = users.findIndex((u) => u.id === selectedUser.id);
+              const access = themeAccess[theme.id] || [0];
+              return access.includes(userIndex);
+            })
+            .map((theme) => (
+              <button
+                key={theme.id}
+                onClick={() => setSelectedTheme(theme)}
+                className="flex w-full flex-col items-center gap-4 rounded-3xl bg-white p-8 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl active:scale-95"
+              >
+                <span className="text-6xl">{theme.icon}</span>
+                <div className="text-center">
+                  <h2 className="text-xl font-bold text-gray-800 md:text-2xl">
+                    {theme.name}
+                  </h2>
+                  <p className="mt-2 text-sm text-gray-500 md:text-base">
+                    {theme.description}
+                  </p>
+                </div>
+              </button>
+            ))}
         </main>
       )}
 

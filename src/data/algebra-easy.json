@@ -485,5 +485,8 @@
       "correct": 3,
       "hint": "Replace x with 9, then subtract from 20."
     }
+  ],
+  "access": [
+    0
   ]
 }

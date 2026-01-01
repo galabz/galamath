@@ -485,5 +485,8 @@
       "correct": 3,
       "hint": "Set up an alligation or equation: 0.60x + 0.40(100-x) = 52. Gold details are irrelevant."
     }
+  ],
+  "access": [
+    0
   ]
 }

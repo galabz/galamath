@@ -485,5 +485,8 @@
       "correct": 1,
       "hint": "The 'hard' parts you can physically touch: CPU, keyboard, monitor, etc."
     }
+  ],
+  "access": [
+    0
   ]
 }

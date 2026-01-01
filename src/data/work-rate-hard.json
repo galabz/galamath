@@ -485,5 +485,8 @@
       "correct": 0,
       "hint": "16/(12-c) = 24/(12+c). Cross multiply and solve for c."
     }
+  ],
+  "access": [
+    0
   ]
 }

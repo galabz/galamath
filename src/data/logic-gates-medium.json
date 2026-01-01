@@ -490,5 +490,8 @@
       "correct": 1,
       "hint": "When A = B, NAND gives NOT(A AND A) = NOT(A). That's equivalent to which gate?"
     }
+  ],
+  "access": [
+    0
   ]
 }

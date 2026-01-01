@@ -490,5 +490,8 @@
       "correct": 1,
       "hint": "XOR gives 1 when inputs differ. What happens when both inputs are the same?"
     }
+  ],
+  "access": [
+    0
   ]
 }

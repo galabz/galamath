@@ -525,5 +525,8 @@
       "correct": 3,
       "hint": "Angles on a straight line add up to 180°."
     }
+  ],
+  "access": [
+    0
   ]
 }

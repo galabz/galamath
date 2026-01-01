@@ -485,5 +485,8 @@
       "correct": 0,
       "hint": "Meeting time = 30 ÷ 10 = 3 hours. A travels 4 × 3 = 12 km."
     }
+  ],
+  "access": [
+    0
   ]
 }

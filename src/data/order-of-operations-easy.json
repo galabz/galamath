@@ -485,5 +485,8 @@
       "correct": 1,
       "hint": "Multiplication first! Then do subtraction and addition left to right."
     }
+  ],
+  "access": [
+    0
   ]
 }

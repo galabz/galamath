@@ -485,5 +485,8 @@
       "correct": 0,
       "hint": "Set up the equation: 2 × (the number) - 7 = 19. Add 7, then divide by 2."
     }
+  ],
+  "access": [
+    0
   ]
 }

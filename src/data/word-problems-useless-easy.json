@@ -485,5 +485,8 @@
       "correct": 3,
       "hint": "Multiply seeds per pot by number of pots. Pot color and source don't matter."
     }
+  ],
+  "access": [
+    0
   ]
 }
