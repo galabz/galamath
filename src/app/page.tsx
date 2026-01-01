@@ -85,6 +85,40 @@ export default function Home() {
         setLoading(false);
       })
       .catch(() => setLoading(false));
+
+    // Retry any failed submissions from previous sessions
+    const retryFailedSubmissions = async () => {
+      const failedSubmissions = JSON.parse(localStorage.getItem("failedSubmissions") || "[]");
+      if (failedSubmissions.length === 0) return;
+
+      const stillFailed: typeof failedSubmissions = [];
+
+      for (const submission of failedSubmissions) {
+        try {
+          const response = await fetch("/api/results", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(submission),
+          });
+
+          if (!response.ok) {
+            stillFailed.push(submission);
+          } else {
+            console.log("Successfully retried failed submission:", submission.themeName, submission.round);
+          }
+        } catch {
+          stillFailed.push(submission);
+        }
+      }
+
+      if (stillFailed.length > 0) {
+        localStorage.setItem("failedSubmissions", JSON.stringify(stillFailed));
+      } else {
+        localStorage.removeItem("failedSubmissions");
+      }
+    };
+
+    retryFailedSubmissions();
   }, []);
 
   const handleLevelSelect = (levelId: string) => {

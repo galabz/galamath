@@ -44,7 +44,17 @@ function QuizContent() {
   const [questionKey, setQuestionKey] = useState(0);
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const questionStartRef = useRef(Date.now());
+  const handleNextRef = useRef<() => void>(() => {});
+
+  // Detect mobile screen size
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   useEffect(() => {
     if (!themeId || !userId) {
@@ -208,27 +218,55 @@ function QuizContent() {
       };
       sessionStorage.setItem("quizResult", JSON.stringify(resultForDisplay));
 
-      // Submit to API
-      try {
-        await fetch("/api/results", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            userId: user.id,
-            userName: user.name,
-            themeId: themeId,
-            themeName: quizData.theme,
-            score,
-            totalQuestions: quizData.questions.length,
-            totalTimeSeconds,
-            avgTimePerQuestion,
-            mistakes,
-            allAnswers,
-            round,
-          }),
-        });
-      } catch (error) {
-        console.error("Failed to submit results:", error);
+      // Submit to API with retry logic
+      const submitPayload = {
+        userId: user.id,
+        userName: user.name,
+        themeId: themeId,
+        themeName: quizData.theme,
+        score,
+        totalQuestions: quizData.questions.length,
+        totalTimeSeconds,
+        avgTimePerQuestion,
+        mistakes,
+        allAnswers,
+        round,
+      };
+
+      const maxRetries = 3;
+      let lastError: Error | null = null;
+
+      for (let attempt = 1; attempt <= maxRetries; attempt++) {
+        try {
+          const response = await fetch("/api/results", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(submitPayload),
+          });
+
+          if (response.ok) {
+            break; // Success, exit retry loop
+          }
+
+          lastError = new Error(`HTTP ${response.status}: ${response.statusText}`);
+          console.error(`Attempt ${attempt}/${maxRetries} failed:`, lastError.message);
+        } catch (error) {
+          lastError = error instanceof Error ? error : new Error(String(error));
+          console.error(`Attempt ${attempt}/${maxRetries} failed:`, lastError.message);
+        }
+
+        // Wait before retrying (exponential backoff)
+        if (attempt < maxRetries) {
+          await new Promise((resolve) => setTimeout(resolve, 1000 * attempt));
+        }
+      }
+
+      if (lastError) {
+        console.error("All attempts to submit results failed:", lastError);
+        // Store failed submission for potential later retry
+        const failedSubmissions = JSON.parse(localStorage.getItem("failedSubmissions") || "[]");
+        failedSubmissions.push({ ...submitPayload, timestamp: Date.now() });
+        localStorage.setItem("failedSubmissions", JSON.stringify(failedSubmissions));
       }
 
       router.push("/results");
@@ -256,6 +294,11 @@ function QuizContent() {
       saveProgress(newState);
       return newState;
     });
+
+    // On mobile, auto-advance after selecting an answer
+    if (isMobile) {
+      setTimeout(() => handleNextRef.current(), 150);
+    }
   };
 
   const handleNext = () => {
@@ -289,6 +332,9 @@ function QuizContent() {
       });
     }
   };
+
+  // Keep ref updated for mobile auto-advance
+  handleNextRef.current = handleNext;
 
   const handlePrevious = () => {
     if (quizState.currentQuestion > 0) {
