@@ -1,3 +1,8 @@
+---
+name: quizz-designer
+description: Create and edit math quiz JSON files with proper answer distribution and hints
+---
+
 # Quiz Generation Rules
 
 When generating quiz questions for Galamath, follow these rules strictly:

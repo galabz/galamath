@@ -1,0 +1,330 @@
+{
+  "theme": "Number Lines",
+  "themeId": "number-lines",
+  "level": "hard",
+  "totalTimeMinutes": 90,
+  "questionTimeMinutes": 2,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">25</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">50</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">75</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">100</text><circle cx=\"104\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["35", "40", "25", "50"],
+      "correct": 0,
+      "hint": "The numbers are counting by 25s. The dot is between 25 and 50."
+    },
+    {
+      "id": 2,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">10</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">30</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">50</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">70</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">90</text><circle cx=\"176\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["60", "50", "55", "70"],
+      "correct": 0,
+      "hint": "The numbers are counting by 20s. The dot is between 50 and 70."
+    },
+    {
+      "id": 3,
+      "question": "What number is missing?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">40</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">120</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">160</text></svg>",
+      "answers": ["40", "80", "60", "120"],
+      "correct": 1,
+      "hint": "The numbers are counting by 40s: 0, 40, ?, 120, 160"
+    },
+    {
+      "id": 4,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">5</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">35</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">65</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">95</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">125</text><circle cx=\"56\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["5", "35", "25", "20"],
+      "correct": 2,
+      "hint": "The numbers are counting by 30s. The dot is between 5 and 35."
+    },
+    {
+      "id": 5,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">50</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">100</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">150</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">200</text><circle cx=\"236\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["150", "185", "200", "175"],
+      "correct": 1,
+      "hint": "The numbers are counting by 50s. The dot is between 150 and 200."
+    },
+    {
+      "id": 6,
+      "question": "What number is missing?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">2</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">22</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">62</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">82</text></svg>",
+      "answers": ["42", "32", "62", "22"],
+      "correct": 0,
+      "hint": "The numbers are counting by 20s: 2, 22, ?, 62, 82"
+    },
+    {
+      "id": 7,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">60</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">120</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">180</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">240</text><circle cx=\"122\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["120", "90", "60", "105"],
+      "correct": 3,
+      "hint": "The numbers are counting by 60s. The dot is between 60 and 120."
+    },
+    {
+      "id": 8,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">15</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">45</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">75</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">105</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">135</text><circle cx=\"194\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["105", "90", "100", "75"],
+      "correct": 2,
+      "hint": "The numbers are counting by 30s. The dot is between 75 and 105."
+    },
+    {
+      "id": 9,
+      "question": "What number is missing?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">75</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">225</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">300</text></svg>",
+      "answers": ["225", "75", "150", "100"],
+      "correct": 2,
+      "hint": "The numbers are counting by 75s: 0, 75, ?, 225, 300"
+    },
+    {
+      "id": 10,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">1</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">31</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">61</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">91</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">121</text><circle cx=\"164\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["81", "61", "71", "91"],
+      "correct": 0,
+      "hint": "The numbers are counting by 30s. The dot is between 61 and 91."
+    },
+    {
+      "id": 11,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">80</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">160</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">240</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">320</text><circle cx=\"38\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["0", "60", "40", "80"],
+      "correct": 2,
+      "hint": "The numbers are counting by 80s. The dot is between 0 and 80."
+    },
+    {
+      "id": 12,
+      "question": "What number is missing?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">3</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">33</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">93</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">123</text></svg>",
+      "answers": ["93", "63", "53", "33"],
+      "correct": 1,
+      "hint": "The numbers are counting by 30s: 3, 33, ?, 93, 123"
+    },
+    {
+      "id": 13,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">4</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">44</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">84</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">124</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">164</text><circle cx=\"248\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["158", "148", "124", "164"],
+      "correct": 0,
+      "hint": "The numbers are counting by 40s. The dot is between 124 and 164."
+    },
+    {
+      "id": 14,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">90</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">180</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">270</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">360</text><circle cx=\"140\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["180", "90", "270", "135"],
+      "correct": 0,
+      "hint": "The numbers are counting by 90s. The dot is on the third mark."
+    },
+    {
+      "id": 15,
+      "question": "What number is missing?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">6</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">56</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">156</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">206</text></svg>",
+      "answers": ["86", "56", "106", "156"],
+      "correct": 2,
+      "hint": "The numbers are counting by 50s: 6, 56, ?, 156, 206"
+    },
+    {
+      "id": 16,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">7</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">57</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">107</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">157</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">207</text><circle cx=\"116\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["77", "57", "87", "107"],
+      "correct": 2,
+      "hint": "The numbers are counting by 50s. The dot is between 57 and 107."
+    },
+    {
+      "id": 17,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">100</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">200</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">300</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">400</text><circle cx=\"80\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["200", "50", "100", "0"],
+      "correct": 2,
+      "hint": "The numbers are counting by 100s. The dot is on the second mark."
+    },
+    {
+      "id": 18,
+      "question": "What number is missing?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">8</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">68</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">188</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">248</text></svg>",
+      "answers": ["68", "98", "128", "188"],
+      "correct": 2,
+      "hint": "The numbers are counting by 60s: 8, 68, ?, 188, 248"
+    },
+    {
+      "id": 19,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">9</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">79</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">149</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">219</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">289</text><circle cx=\"212\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["219", "209", "189", "149"],
+      "correct": 1,
+      "hint": "The numbers are counting by 70s. The dot is between 149 and 219."
+    },
+    {
+      "id": 20,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">110</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">220</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">330</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">440</text><circle cx=\"50\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["88", "0", "110", "55"],
+      "correct": 3,
+      "hint": "The numbers are counting by 110s. The dot is between 0 and 110."
+    },
+    {
+      "id": 21,
+      "question": "What number is missing?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">120</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">360</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">480</text></svg>",
+      "answers": ["360", "180", "240", "120"],
+      "correct": 2,
+      "hint": "The numbers are counting by 120s: 0, 120, ?, 360, 480"
+    },
+    {
+      "id": 22,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">11</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">91</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">171</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">251</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">331</text><circle cx=\"134\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["131", "171", "91", "161"],
+      "correct": 3,
+      "hint": "The numbers are counting by 80s. The dot is between 91 and 171."
+    },
+    {
+      "id": 23,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">130</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">260</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">390</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">520</text><circle cx=\"200\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["260", "325", "390", "520"],
+      "correct": 2,
+      "hint": "The numbers are counting by 130s. The dot is on the fourth mark."
+    },
+    {
+      "id": 24,
+      "question": "What number is missing?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">12</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">102</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">282</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">372</text></svg>",
+      "answers": ["102", "142", "192", "282"],
+      "correct": 2,
+      "hint": "The numbers are counting by 90s: 12, 102, ?, 282, 372"
+    },
+    {
+      "id": 25,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">13</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">113</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">213</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">313</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">413</text><circle cx=\"86\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["123", "133", "13", "113"],
+      "correct": 0,
+      "hint": "The numbers are counting by 100s. The dot is between 113 and 213."
+    },
+    {
+      "id": 26,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">140</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">280</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">420</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">560</text><circle cx=\"254\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["490", "545", "560", "420"],
+      "correct": 1,
+      "hint": "The numbers are counting by 140s. The dot is between 420 and 560."
+    },
+    {
+      "id": 27,
+      "question": "What number is missing?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">150</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">450</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">600</text></svg>",
+      "answers": ["150", "225", "300", "450"],
+      "correct": 2,
+      "hint": "The numbers are counting by 150s: 0, 150, ?, 450, 600"
+    },
+    {
+      "id": 28,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">14</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">124</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">234</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">344</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">454</text><circle cx=\"146\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["284", "124", "244", "234"],
+      "correct": 2,
+      "hint": "The numbers are counting by 110s. The dot is between 234 and 344."
+    },
+    {
+      "id": 29,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">160</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">320</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">480</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">640</text><circle cx=\"44\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["160", "0", "80", "120"],
+      "correct": 2,
+      "hint": "The numbers are counting by 160s. The dot is between 0 and 160."
+    },
+    {
+      "id": 30,
+      "question": "What number is missing?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">15</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">135</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">375</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">495</text></svg>",
+      "answers": ["135", "195", "375", "255"],
+      "correct": 3,
+      "hint": "The numbers are counting by 120s: 15, 135, ?, 375, 495"
+    },
+    {
+      "id": 31,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">16</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">136</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">256</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">376</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">496</text><circle cx=\"218\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["376", "346", "416", "256"],
+      "correct": 2,
+      "hint": "The numbers are counting by 120s. The dot is between 376 and 496."
+    },
+    {
+      "id": 32,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">170</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">340</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">510</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">680</text><circle cx=\"140\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["510", "170", "340", "255"],
+      "correct": 2,
+      "hint": "The numbers are counting by 170s. The dot is on the third mark."
+    },
+    {
+      "id": 33,
+      "question": "What number is missing?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">180</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">540</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">720</text></svg>",
+      "answers": ["540", "270", "180", "360"],
+      "correct": 3,
+      "hint": "The numbers are counting by 180s: 0, 180, ?, 540, 720"
+    },
+    {
+      "id": 34,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">17</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">147</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">277</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">407</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">537</text><circle cx=\"98\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["197", "172", "277", "147"],
+      "correct": 0,
+      "hint": "The numbers are counting by 130s. The dot is between 147 and 277."
+    },
+    {
+      "id": 35,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">190</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">380</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">570</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">760</text><circle cx=\"242\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["760", "570", "722", "665"],
+      "correct": 2,
+      "hint": "The numbers are counting by 190s. The dot is between 570 and 760."
+    },
+    {
+      "id": 36,
+      "question": "What number is missing?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">200</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">600</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">800</text></svg>",
+      "answers": ["600", "200", "300", "400"],
+      "correct": 3,
+      "hint": "The numbers are counting by 200s: 0, 200, ?, 600, 800"
+    },
+    {
+      "id": 37,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">18</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">158</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">298</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">438</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">578</text><circle cx=\"182\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["338", "298", "378", "438"],
+      "correct": 2,
+      "hint": "The numbers are counting by 140s. The dot is between 298 and 438."
+    },
+    {
+      "id": 38,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">210</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">420</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">630</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">840</text><circle cx=\"80\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["0", "105", "420", "210"],
+      "correct": 3,
+      "hint": "The numbers are counting by 210s. The dot is on the second mark."
+    },
+    {
+      "id": 39,
+      "question": "What number is missing?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">220</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">660</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">880</text></svg>",
+      "answers": ["330", "660", "220", "440"],
+      "correct": 3,
+      "hint": "The numbers are counting by 220s: 0, 220, ?, 660, 880"
+    },
+    {
+      "id": 40,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">19</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">169</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">319</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">469</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">619</text><circle cx=\"226\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["319", "619", "444", "569"],
+      "correct": 3,
+      "hint": "The numbers are counting by 150s. The dot is between 469 and 619."
+    }
+  ],
+  "access": [2]
+}

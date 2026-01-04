@@ -1,0 +1,330 @@
+{
+  "theme": "Number Lines",
+  "themeId": "number-lines",
+  "level": "easy",
+  "totalTimeMinutes": 90,
+  "questionTimeMinutes": 2,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">1</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">2</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">3</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">4</text><circle cx=\"140\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["1", "2", "3", "0"],
+      "correct": 1,
+      "hint": "Look at which number the red dot is pointing to."
+    },
+    {
+      "id": 2,
+      "question": "What number comes after 3?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">1</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">2</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">3</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text></svg>",
+      "answers": ["5", "3", "4", "2"],
+      "correct": 2,
+      "hint": "Count forward one number from 3."
+    },
+    {
+      "id": 3,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">1</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">2</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">3</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">4</text><circle cx=\"80\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["1", "3", "0", "2"],
+      "correct": 0,
+      "hint": "The red dot is on the first mark after 0."
+    },
+    {
+      "id": 4,
+      "question": "What number comes before 2?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">1</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">2</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">3</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">4</text></svg>",
+      "answers": ["0", "2", "1", "3"],
+      "correct": 0,
+      "hint": "What number comes right before 1?"
+    },
+    {
+      "id": 5,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">1</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">2</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">3</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">4</text><circle cx=\"260\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["5", "3", "2", "4"],
+      "correct": 3,
+      "hint": "The red dot is on the last number shown."
+    },
+    {
+      "id": 6,
+      "question": "What number is missing?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">2</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">3</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">4</text></svg>",
+      "answers": ["1", "3", "2", "0"],
+      "correct": 0,
+      "hint": "Count forward from 0: 0, ?, 2..."
+    },
+    {
+      "id": 7,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">1</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">2</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">3</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">4</text><circle cx=\"20\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["3", "1", "0", "2"],
+      "correct": 2,
+      "hint": "The red dot is on the first mark, which is 0."
+    },
+    {
+      "id": 8,
+      "question": "What number comes after 1?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">1</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">3</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">4</text></svg>",
+      "answers": ["2", "3", "0", "1"],
+      "correct": 0,
+      "hint": "What comes after 1 when you count?"
+    },
+    {
+      "id": 9,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">1</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">2</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">3</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">4</text><circle cx=\"200\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["2", "4", "1", "3"],
+      "correct": 3,
+      "hint": "The red dot is on the fourth mark from 0."
+    },
+    {
+      "id": 10,
+      "question": "What number comes before 4?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">1</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">2</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">4</text></svg>",
+      "answers": ["5", "4", "2", "3"],
+      "correct": 3,
+      "hint": "Count backward one from 4."
+    },
+    {
+      "id": 11,
+      "question": "What number is missing?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">0</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">1</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">2</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">4</text></svg>",
+      "answers": ["5", "3", "2", "4"],
+      "correct": 1,
+      "hint": "Look at the pattern: 0, 1, 2, ?, 4"
+    },
+    {
+      "id": 12,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">5</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">6</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">7</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">8</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">9</text><circle cx=\"140\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["5", "7", "8", "6"],
+      "correct": 1,
+      "hint": "The red dot is on the third number from 5."
+    },
+    {
+      "id": 13,
+      "question": "What number comes after 6?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">5</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">6</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">8</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">9</text></svg>",
+      "answers": ["8", "7", "6", "5"],
+      "correct": 1,
+      "hint": "Count forward one number from 6."
+    },
+    {
+      "id": 14,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">5</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">6</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">7</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">8</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">9</text><circle cx=\"260\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["8", "7", "9", "10"],
+      "correct": 2,
+      "hint": "The red dot is on the last number shown."
+    },
+    {
+      "id": 15,
+      "question": "What number comes before 7?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">5</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">6</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">8</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">9</text></svg>",
+      "answers": ["8", "5", "6", "7"],
+      "correct": 3,
+      "hint": "What number comes right before 8?"
+    },
+    {
+      "id": 16,
+      "question": "What number is missing?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">5</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">7</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">8</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">9</text></svg>",
+      "answers": ["8", "5", "7", "6"],
+      "correct": 3,
+      "hint": "Look at the pattern: 5, ?, 7, 8, 9"
+    },
+    {
+      "id": 17,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">5</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">6</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">7</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">8</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">9</text><circle cx=\"80\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["6", "5", "7", "8"],
+      "correct": 0,
+      "hint": "The red dot is on the second number from 5."
+    },
+    {
+      "id": 18,
+      "question": "What number comes after 8?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">5</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">6</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">7</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">8</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text></svg>",
+      "answers": ["8", "10", "7", "9"],
+      "correct": 3,
+      "hint": "What comes after 8 when you count?"
+    },
+    {
+      "id": 19,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">5</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">6</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">7</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">8</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">9</text><circle cx=\"200\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["8", "9", "6", "7"],
+      "correct": 0,
+      "hint": "The red dot is on the fourth number from 5."
+    },
+    {
+      "id": 20,
+      "question": "What number comes before 6?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">6</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">7</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">8</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">9</text></svg>",
+      "answers": ["6", "7", "5", "4"],
+      "correct": 2,
+      "hint": "Count backward one from 6."
+    },
+    {
+      "id": 21,
+      "question": "What number is missing?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">5</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">6</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">7</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">9</text></svg>",
+      "answers": ["9", "6", "7", "8"],
+      "correct": 3,
+      "hint": "Look at the pattern: 5, 6, 7, ?, 9"
+    },
+    {
+      "id": 22,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">10</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">11</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">12</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">13</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">14</text><circle cx=\"140\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["11", "10", "13", "12"],
+      "correct": 3,
+      "hint": "The red dot is on the third number from 10."
+    },
+    {
+      "id": 23,
+      "question": "What number comes after 11?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">10</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">11</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">13</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">14</text></svg>",
+      "answers": ["11", "10", "12", "13"],
+      "correct": 2,
+      "hint": "Count forward one number from 11."
+    },
+    {
+      "id": 24,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">10</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">11</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">12</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">13</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">14</text><circle cx=\"20\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["12", "11", "10", "9"],
+      "correct": 2,
+      "hint": "The red dot is on the first number shown."
+    },
+    {
+      "id": 25,
+      "question": "What number comes before 12?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">10</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">11</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">13</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">14</text></svg>",
+      "answers": ["13", "10", "11", "12"],
+      "correct": 3,
+      "hint": "What number comes right before 13?"
+    },
+    {
+      "id": 26,
+      "question": "What number is missing?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">10</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">12</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">13</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">14</text></svg>",
+      "answers": ["10", "13", "12", "11"],
+      "correct": 3,
+      "hint": "Look at the pattern: 10, ?, 12, 13, 14"
+    },
+    {
+      "id": 27,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">10</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">11</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">12</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">13</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">14</text><circle cx=\"260\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["13", "12", "15", "14"],
+      "correct": 3,
+      "hint": "The red dot is on the last number shown."
+    },
+    {
+      "id": 28,
+      "question": "What number comes after 13?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">10</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">11</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">12</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">13</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text></svg>",
+      "answers": ["13", "14", "12", "15"],
+      "correct": 1,
+      "hint": "What comes after 13 when you count?"
+    },
+    {
+      "id": 29,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">10</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">11</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">12</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">13</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">14</text><circle cx=\"80\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["13", "10", "12", "11"],
+      "correct": 3,
+      "hint": "The red dot is on the second number from 10."
+    },
+    {
+      "id": 30,
+      "question": "What number comes before 11?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">11</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">12</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">13</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">14</text></svg>",
+      "answers": ["10", "12", "9", "11"],
+      "correct": 0,
+      "hint": "Count backward one from 11."
+    },
+    {
+      "id": 31,
+      "question": "What number is missing?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">10</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">11</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">13</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">14</text></svg>",
+      "answers": ["10", "13", "12", "11"],
+      "correct": 2,
+      "hint": "Look at the pattern: 10, 11, ?, 13, 14"
+    },
+    {
+      "id": 32,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">10</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">11</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">12</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">13</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">14</text><circle cx=\"200\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["11", "13", "12", "14"],
+      "correct": 1,
+      "hint": "The red dot is on the fourth number from 10."
+    },
+    {
+      "id": 33,
+      "question": "What number comes after 14?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">10</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">11</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">12</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">13</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">14</text><text x=\"290\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text></svg>",
+      "answers": ["14", "15", "13", "16"],
+      "correct": 1,
+      "hint": "What comes after 14 when you count?"
+    },
+    {
+      "id": 34,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">15</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">16</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">17</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">18</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">19</text><circle cx=\"140\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["15", "17", "18", "16"],
+      "correct": 1,
+      "hint": "The red dot is on the third number from 15."
+    },
+    {
+      "id": 35,
+      "question": "What number comes before 17?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">15</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">16</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">18</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">19</text></svg>",
+      "answers": ["17", "18", "16", "15"],
+      "correct": 0,
+      "hint": "What number comes right before 18?"
+    },
+    {
+      "id": 36,
+      "question": "What number is missing?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">15</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">17</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">18</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">19</text></svg>",
+      "answers": ["18", "16", "17", "15"],
+      "correct": 1,
+      "hint": "Look at the pattern: 15, ?, 17, 18, 19"
+    },
+    {
+      "id": 37,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">15</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">16</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">17</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">18</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">19</text><circle cx=\"260\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["19", "18", "17", "20"],
+      "correct": 0,
+      "hint": "The red dot is on the last number shown."
+    },
+    {
+      "id": 38,
+      "question": "What number comes after 16?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">15</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">16</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">18</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">19</text></svg>",
+      "answers": ["18", "15", "17", "16"],
+      "correct": 2,
+      "hint": "Count forward one number from 16."
+    },
+    {
+      "id": 39,
+      "question": "What number is shown by the dot?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">15</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">16</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">17</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">18</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">19</text><circle cx=\"80\" cy=\"40\" r=\"6\" fill=\"#EF4444\"/></svg>",
+      "answers": ["16", "17", "15", "18"],
+      "correct": 0,
+      "hint": "The red dot is on the second number from 15."
+    },
+    {
+      "id": 40,
+      "question": "What number comes before 18?",
+      "svg": "<svg width=\"300\" height=\"80\" viewBox=\"0 0 300 80\"><line x1=\"20\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"20\" y1=\"35\" x2=\"20\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"35\" x2=\"140\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"35\" x2=\"200\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"35\" x2=\"260\" y2=\"45\" stroke=\"#4F46E5\" stroke-width=\"2\"/><text x=\"20\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">15</text><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">16</text><text x=\"140\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">17</text><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">?</text><text x=\"260\" y=\"60\" text-anchor=\"middle\" font-size=\"14\" fill=\"#374151\">19</text></svg>",
+      "answers": ["19", "16", "18", "17"],
+      "correct": 2,
+      "hint": "Count backward one from 18."
+    }
+  ],
+  "access": [2]
+}

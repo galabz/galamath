@@ -33,6 +33,8 @@ function QuizContent() {
   const userId = searchParams.get("user");
   const roundParam = searchParams.get("round");
   const round = roundParam ? parseInt(roundParam, 10) : 1;
+  const isTestMode = searchParams.get("mode") === "test";
+  const testLevel = searchParams.get("level");
 
   const [user, setUser] = useState<User | null>(null);
   const [quizData, setQuizData] = useState<QuizData | null>(null);
@@ -50,10 +52,21 @@ function QuizContent() {
   const handleNextRef = useRef<() => void>(() => {});
 
   useEffect(() => {
-    if (!themeId || !userId) {
-      router.push("/");
-      return;
+    // Validate required params based on mode
+    if (isTestMode) {
+      if (!testLevel || !userId) {
+        router.push("/");
+        return;
+      }
+    } else {
+      if (!themeId || !userId) {
+        router.push("/");
+        return;
+      }
     }
+
+    // The effective theme ID for saving/restoring progress
+    const effectiveThemeId = isTestMode ? `test-${testLevel}` : themeId!;
 
     // Check for saved progress
     const savedProgressStr = localStorage.getItem(QUIZ_PROGRESS_KEY);
@@ -64,7 +77,7 @@ function QuizContent() {
         savedProgress = JSON.parse(savedProgressStr);
         // Only restore if it matches current quiz
         if (
-          savedProgress?.themeId !== themeId ||
+          savedProgress?.themeId !== effectiveThemeId ||
           savedProgress?.userId !== userId ||
           savedProgress?.round !== round
         ) {
@@ -76,9 +89,16 @@ function QuizContent() {
     }
 
     // Load users and quiz data
+    const quizDataPromise = isTestMode
+      ? fetch(`/api/test-quiz?level=${testLevel}&user=${userId}`).then((res) => {
+          if (!res.ok) throw new Error("Failed to load test quiz");
+          return res.json();
+        })
+      : import(`@/data/${themeId}.json`).then((data) => data.default || data);
+
     Promise.all([
       fetch("/api/users").then((res) => res.json()),
-      import(`@/data/${themeId}.json`).then((data) => data.default || data),
+      quizDataPromise,
     ])
       .then(([users, quizDataParsed]) => {
         const foundUser = users.find((u: User) => u.id === userId);
@@ -135,7 +155,7 @@ function QuizContent() {
           localStorage.setItem(
             QUIZ_PROGRESS_KEY,
             JSON.stringify({
-              themeId,
+              themeId: effectiveThemeId,
               userId,
               round,
               quizState: newState,
@@ -149,12 +169,13 @@ function QuizContent() {
       .catch(() => {
         router.push("/");
       });
-  }, [themeId, userId, router, round]);
+  }, [themeId, userId, router, round, isTestMode, testLevel]);
 
   // Save progress to localStorage
+  const effectiveThemeId = isTestMode ? `test-${testLevel}` : themeId;
   const saveProgress = useCallback(
     (state: QuizState) => {
-      if (!themeId || !userId) return;
+      if ((!themeId && !isTestMode) || !userId) return;
       const wrongQuestionIds =
         round > 1
           ? JSON.parse(sessionStorage.getItem("wrongQuestionIds") || "[]")
@@ -162,7 +183,7 @@ function QuizContent() {
       localStorage.setItem(
         QUIZ_PROGRESS_KEY,
         JSON.stringify({
-          themeId,
+          themeId: effectiveThemeId,
           userId,
           round,
           quizState: state,
@@ -170,7 +191,7 @@ function QuizContent() {
         }),
       );
     },
-    [themeId, userId, round],
+    [effectiveThemeId, themeId, userId, round, isTestMode],
   );
 
   const submitResults = useCallback(
@@ -215,9 +236,9 @@ function QuizContent() {
       }));
 
       // Store in session for results page
-      // Use themeId from URL (includes level suffix) not quizData.themeId
+      // Use effectiveThemeId for proper identification
       const resultForDisplay = {
-        themeId: themeId,
+        themeId: effectiveThemeId,
         themeName: quizData.theme,
         userId: user.id,
         userName: user.name,
@@ -228,14 +249,41 @@ function QuizContent() {
         totalTime: totalTimeSeconds,
         completedAt: new Date().toISOString(),
         round,
+        isTestMode,
       };
       sessionStorage.setItem("quizResult", JSON.stringify(resultForDisplay));
+
+      // Extract level from themeId (e.g., "addition-easy" -> "easy") or testLevel
+      const level = isTestMode
+        ? testLevel
+        : effectiveThemeId?.split("-").pop();
+
+      // Calculate theme breakdown for test mode
+      let themeBreakdown: { theme: string; correct: number; total: number }[] | undefined;
+      if (isTestMode) {
+        const breakdown: Record<string, { correct: number; total: number }> = {};
+        quizData.questions.forEach((q, idx) => {
+          const theme = q.sourceTheme || "Unknown";
+          if (!breakdown[theme]) {
+            breakdown[theme] = { correct: 0, total: 0 };
+          }
+          breakdown[theme].total++;
+          if (finalState.answers[idx] === q.correct) {
+            breakdown[theme].correct++;
+          }
+        });
+        themeBreakdown = Object.entries(breakdown).map(([theme, stats]) => ({
+          theme,
+          correct: stats.correct,
+          total: stats.total,
+        }));
+      }
 
       // Submit to API with retry logic
       const submitPayload = {
         userId: user.id,
         userName: user.name,
-        themeId: themeId,
+        themeId: effectiveThemeId,
         themeName: quizData.theme,
         score,
         totalQuestions: quizData.questions.length,
@@ -244,6 +292,9 @@ function QuizContent() {
         mistakes,
         allAnswers,
         round,
+        level,
+        isTestMode,
+        themeBreakdown,
       };
 
       const maxRetries = 3;
@@ -297,7 +348,7 @@ function QuizContent() {
 
       router.push("/results");
     },
-    [quizData, user, router, submitting, round, themeId],
+    [quizData, user, router, submitting, round, effectiveThemeId, isTestMode],
   );
 
   const handleTimeUp = useCallback(() => {

@@ -69,6 +69,12 @@ const themes: Theme[] = [
     description: "Architecture, OS, networks, and Swift programming basics",
     icon: "💻",
   },
+  {
+    id: "number-lines",
+    name: "Number Lines",
+    description: "Read numbers on number lines - from basic counting to skip counting patterns",
+    icon: "📏",
+  },
 ];
 
 const levels = [
@@ -77,11 +83,14 @@ const levels = [
   { id: "hard", name: "Hard", color: "bg-red-500", description: "Exponents & complex" },
 ];
 
+type Mode = "training" | "test";
+
 export default function Home() {
   const router = useRouter();
   const [unlocked, setUnlocked] = useState<boolean | null>(null);
   const [users, setUsers] = useState<User[]>([]);
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
+  const [selectedMode, setSelectedMode] = useState<Mode>("training");
   const [selectedTheme, setSelectedTheme] = useState<Theme | null>(null);
   const [loading, setLoading] = useState(true);
   const [themeAccess, setThemeAccess] = useState<Record<string, number[]>>({});
@@ -153,15 +162,27 @@ export default function Home() {
   }, []);
 
   const handleLevelSelect = (levelId: string) => {
-    if (!selectedUser || !selectedTheme) return;
-    router.push(`/quiz?theme=${selectedTheme.id}-${levelId}&user=${selectedUser.id}`);
+    if (!selectedUser) return;
+
+    if (selectedMode === "test") {
+      // Test mode: use all available themes for this user
+      router.push(`/quiz?mode=test&level=${levelId}&user=${selectedUser.id}`);
+    } else {
+      // Training mode: use selected theme
+      if (!selectedTheme) return;
+      router.push(`/quiz?theme=${selectedTheme.id}-${levelId}&user=${selectedUser.id}`);
+    }
   };
 
   const handleBack = () => {
     if (selectedTheme) {
       setSelectedTheme(null);
+    } else if (selectedMode === "test" && selectedUser) {
+      // In test mode, go back from level to mode selection
+      setSelectedMode("training");
     } else if (selectedUser) {
       setSelectedUser(null);
+      setSelectedMode("training");
     }
   };
 
@@ -183,18 +204,27 @@ export default function Home() {
   }
 
   // Determine current step
-  const step = !selectedUser ? "user" : !selectedTheme ? "theme" : "level";
+  // In test mode: user -> mode -> level (skip theme)
+  // In training mode: user -> mode -> theme -> level
+  const step = !selectedUser
+    ? "user"
+    : selectedMode === "test"
+      ? "level"
+      : !selectedTheme
+        ? "theme"
+        : "level";
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center p-6 md:p-12">
+    <div className="flex min-h-screen flex-col items-center p-6 pt-12 md:p-12 md:pt-20">
       <header className="mb-12 text-center">
         <h1 className="mb-4 text-5xl font-extrabold text-indigo-600 md:text-6xl">
           Galamath
         </h1>
         <p className="text-lg text-gray-600 md:text-xl">
           {step === "user" && "Select your profile to begin"}
-          {step === "theme" && `Hi ${selectedUser?.name}! Choose a topic`}
-          {step === "level" && "Choose difficulty level"}
+          {step === "theme" && "Choose a topic"}
+          {step === "level" && selectedMode === "test" && "Choose test difficulty"}
+          {step === "level" && selectedMode === "training" && "Choose difficulty level"}
         </p>
       </header>
 
@@ -215,6 +245,38 @@ export default function Home() {
           selectedUser={selectedUser}
           onSelectUser={setSelectedUser}
         />
+      )}
+
+      {/* Mode toggle - shown after user selection */}
+      {selectedUser && (
+        <div className="mb-8 flex items-center gap-2 rounded-full bg-gray-100 p-1">
+          <button
+            onClick={() => {
+              setSelectedMode("training");
+              setSelectedTheme(null);
+            }}
+            className={`rounded-full px-6 py-2 text-sm font-semibold transition-all ${
+              selectedMode === "training"
+                ? "bg-indigo-600 text-white shadow-md"
+                : "text-gray-600 hover:text-gray-800"
+            }`}
+          >
+            Training
+          </button>
+          <button
+            onClick={() => {
+              setSelectedMode("test");
+              setSelectedTheme(null);
+            }}
+            className={`rounded-full px-6 py-2 text-sm font-semibold transition-all ${
+              selectedMode === "test"
+                ? "bg-indigo-600 text-white shadow-md"
+                : "text-gray-600 hover:text-gray-800"
+            }`}
+          >
+            Test
+          </button>
+        </div>
       )}
 
       {/* Theme selection */}
@@ -266,7 +328,11 @@ export default function Home() {
       )}
 
       <footer className="mt-12 text-center text-sm text-gray-500">
-        <p>40 questions • 1h30 total time • Good luck!</p>
+        {selectedMode === "test" ? (
+          <p>40 questions from all topics • 1h30 total time • Good luck!</p>
+        ) : (
+          <p>40 questions • 1h30 total time • Good luck!</p>
+        )}
       </footer>
     </div>
   );

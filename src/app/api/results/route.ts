@@ -3,6 +3,12 @@ import { sql } from "@vercel/postgres";
 import { Resend } from "resend";
 import { Mistake } from "@/lib/types";
 
+interface ThemeBreakdown {
+  theme: string;
+  correct: number;
+  total: number;
+}
+
 interface ResultPayload {
   userId: string;
   userName: string;
@@ -21,6 +27,9 @@ interface ResultPayload {
     timeSpent: number;
   }[];
   round?: number;
+  level?: string;
+  isTestMode?: boolean;
+  themeBreakdown?: ThemeBreakdown[];
 }
 
 export async function POST(request: NextRequest) {
@@ -62,6 +71,25 @@ export async function POST(request: NextRequest) {
         )
         .join("\n\n");
 
+      // Format level for display (capitalize first letter)
+      const levelDisplay = body.level
+        ? body.level.charAt(0).toUpperCase() + body.level.slice(1)
+        : "Unknown";
+
+      // Format theme breakdown for test mode
+      const themeBreakdownText = body.themeBreakdown
+        ? body.themeBreakdown
+            .sort((a, b) => (b.correct / b.total) - (a.correct / a.total))
+            .map((t) => {
+              const pct = ((t.correct / t.total) * 100).toFixed(0);
+              return `• ${t.theme}: ${t.correct}/${t.total} (${pct}%)`;
+            })
+            .join("\n")
+        : "";
+
+      // Mode label for subject and body
+      const modeLabel = body.isTestMode ? "Test" : "Training";
+
       try {
         // Only send attempt email if not a perfect score
         // Perfect scores get a special success email instead
@@ -72,17 +100,22 @@ export async function POST(request: NextRequest) {
           await resend.emails.send({
             from: "Galamath <onboarding@resend.dev>",
             to: notificationEmail,
-            subject: `[Galamath] ${body.userName} completed ${body.themeName} - ${successRate}%`,
+            subject: `[Galamath] ${body.userName} completed ${body.themeName} (${levelDisplay} ${modeLabel}) - ${successRate}%`,
             text: `
 Quiz Results for ${body.userName}
 ================================
 
+Mode: ${modeLabel}
+Level: ${levelDisplay}
 Theme: ${body.themeName}
 Score: ${body.score}/${body.totalQuestions} (${successRate}%)
 Round: ${body.round || 1}
 Total Time: ${totalMinutes}m ${totalSeconds}s
 Average Time per Question: ${avgTime}s
-
+${body.isTestMode && themeBreakdownText ? `
+Performance by Theme:
+${themeBreakdownText}
+` : ""}
 Mistakes (${body.mistakes.length}):
 
 ${mistakesList}
@@ -97,18 +130,23 @@ Galamath Quiz App
           await resend.emails.send({
             from: "Galamath <onboarding@resend.dev>",
             to: notificationEmail,
-            subject: `[Galamath] ${body.userName} achieved PERFECT SCORE on ${body.themeName}!`,
+            subject: `[Galamath] ${body.userName} achieved PERFECT SCORE on ${body.themeName} (${levelDisplay} ${modeLabel})!`,
             text: `
 PERFECT SCORE!
 ================================
 
 ${body.userName} has successfully completed ${body.themeName} with a perfect score!
 
+Mode: ${modeLabel}
+Level: ${levelDisplay}
 Score: ${body.score}/${body.totalQuestions} (100%)
 Rounds needed: ${round}
 Total Time: ${totalMinutes}m ${totalSeconds}s
 Average Time per Question: ${avgTime}s
-
+${body.isTestMode && themeBreakdownText ? `
+Performance by Theme:
+${themeBreakdownText}
+` : ""}
 ${round === 1 ? "Amazing! First try success!" : `Completed after ${round} rounds of practice.`}
 
 ---

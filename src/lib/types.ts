@@ -5,6 +5,7 @@ export interface Question {
   answers: [string, string, string, string];
   correct: number; // Index 0-3
   hint: string; // Hint to guide thinking without revealing answer
+  sourceTheme?: string; // Theme name for test mode questions
 }
 
 export interface Theme {
