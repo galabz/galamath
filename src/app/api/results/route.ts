@@ -30,6 +30,7 @@ interface ResultPayload {
   level?: string;
   isTestMode?: boolean;
   themeBreakdown?: ThemeBreakdown[];
+  sessionId?: string;
 }
 
 export async function POST(request: NextRequest) {
@@ -43,11 +44,13 @@ export async function POST(request: NextRequest) {
           INSERT INTO quiz_results (
             user_id, user_name, theme_id, theme_name,
             score, total_questions, total_time_seconds, avg_time_per_question,
-            mistakes, all_answers, completed_at
+            mistakes, all_answers, round, level, is_test_mode, session_id, completed_at
           ) VALUES (
             ${body.userId}, ${body.userName}, ${body.themeId}, ${body.themeName},
             ${body.score}, ${body.totalQuestions}, ${body.totalTimeSeconds}, ${body.avgTimePerQuestion},
-            ${JSON.stringify(body.mistakes)}, ${JSON.stringify(body.allAnswers)}, NOW()
+            ${JSON.stringify(body.mistakes)}, ${JSON.stringify(body.allAnswers)},
+            ${body.round || 1}, ${body.level || 'easy'}, ${body.isTestMode || false},
+            ${body.sessionId || null}, NOW()
           )
         `;
       } catch (dbError) {

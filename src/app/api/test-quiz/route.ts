@@ -32,6 +32,10 @@ const themes = [
   "logic-gates",
   "computer-science",
   "number-lines",
+  "counting-large-numbers",
+  "properties-of-operations",
+  "time-and-calendar",
+  "word-problems",
 ];
 
 function shuffleArray<T>(array: T[]): T[] {
@@ -51,14 +55,14 @@ export async function GET(request: NextRequest) {
   if (!level || !userId) {
     return NextResponse.json(
       { error: "Missing level or user parameter" },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
   if (!["easy", "medium", "hard"].includes(level)) {
     return NextResponse.json(
       { error: "Invalid level. Must be easy, medium, or hard" },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
@@ -66,7 +70,7 @@ export async function GET(request: NextRequest) {
   const usersEnv = process.env.USERS!;
   const userNames = usersEnv.split(",").map((name) => name.trim());
   const userIndex = userNames.findIndex(
-    (name) => name[0].toUpperCase() === userId
+    (name) => name[0].toUpperCase() === userId,
   );
 
   if (userIndex === -1) {
@@ -109,7 +113,7 @@ export async function GET(request: NextRequest) {
   if (allQuestions.length === 0) {
     return NextResponse.json(
       { error: "No accessible themes found for this user" },
-      { status: 404 }
+      { status: 404 },
     );
   }
 

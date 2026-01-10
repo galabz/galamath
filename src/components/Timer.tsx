@@ -62,7 +62,7 @@ export default function Timer({
 
   return (
     <div
-      className={`flex flex-col items-center rounded-xl px-4 py-2 ${
+      className={`flex items-center gap-1 rounded-lg px-2 py-1 ${
         isIndicative
           ? "bg-gray-100"
           : isVeryLow
@@ -73,11 +73,11 @@ export default function Timer({
       }`}
     >
       {showLabel && (
-        <span className="text-xs font-medium uppercase tracking-wide text-gray-500">
+        <span className="text-xs font-medium text-gray-500">
           {label}
         </span>
       )}
-      <span className={`text-2xl font-bold md:text-3xl ${textColorClass}`}>
+      <span className={`text-base font-bold tabular-nums ${textColorClass}`}>
         {hrs > 0 ? (
           <>
             {hrs}

@@ -10,19 +10,14 @@ export default function ProgressBar({ current, total, skipped = 0 }: ProgressBar
   const percentage = ((current + 1) / total) * 100;
 
   return (
-    <div className="w-full">
-      <div className="mb-2 flex justify-between text-sm font-medium text-gray-600">
-        <span>
-          Question {current + 1} of {total}
-          {skipped > 0 && (
-            <span className="ml-2 text-orange-500">
-              ({skipped} skipped)
-            </span>
-          )}
-        </span>
-        <span>{Math.round(percentage)}%</span>
-      </div>
-      <div className="h-3 w-full overflow-hidden rounded-full bg-gray-200">
+    <div className="flex items-center gap-2 flex-1">
+      <span className="text-xs font-medium text-gray-500 whitespace-nowrap">
+        {current + 1}/{total}
+        {skipped > 0 && (
+          <span className="ml-1 text-orange-500">({skipped})</span>
+        )}
+      </span>
+      <div className="h-2 flex-1 overflow-hidden rounded-full bg-gray-200">
         <div
           className="h-full rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-300"
           style={{ width: `${percentage}%` }}

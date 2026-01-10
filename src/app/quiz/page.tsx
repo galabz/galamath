@@ -23,6 +23,7 @@ interface SavedQuizProgress {
   round: number;
   quizState: QuizState;
   wrongQuestionIds?: number[];
+  sessionId?: string;
 }
 
 const QUIZ_PROGRESS_KEY = "quizProgress";
@@ -51,6 +52,7 @@ function QuizContent() {
   const [confirmingAnswer, setConfirmingAnswer] = useState(false);
   const questionStartRef = useRef(Date.now());
   const handleNextRef = useRef<() => void>(() => {});
+  const sessionIdRef = useRef<string | null>(null);
 
   useEffect(() => {
     // Validate required params based on mode
@@ -130,6 +132,20 @@ function QuizContent() {
 
         setQuizData(filteredQuizData);
 
+        // Generate or retrieve session ID
+        // Round 1 = new session, Round 2+ = continue existing session
+        let currentSessionId: string;
+        if (round === 1) {
+          // Generate new session ID: user-theme-timestamp
+          currentSessionId = `${userId}-${effectiveThemeId}-${Date.now()}`;
+          sessionStorage.setItem("quizSessionId", currentSessionId);
+        } else {
+          // Retrieve existing session ID or create new one
+          currentSessionId = sessionStorage.getItem("quizSessionId") ||
+            `${userId}-${effectiveThemeId}-${Date.now()}`;
+        }
+        sessionIdRef.current = currentSessionId;
+
         // Restore saved state or create new one
         if (
           savedProgress &&
@@ -138,6 +154,10 @@ function QuizContent() {
         ) {
           setQuizState(savedProgress.quizState);
           questionStartRef.current = Date.now();
+          // Restore session ID from saved progress if available
+          if (savedProgress.sessionId) {
+            sessionIdRef.current = savedProgress.sessionId;
+          }
         } else {
           const newState = {
             currentQuestion: 0,
@@ -161,6 +181,7 @@ function QuizContent() {
               round,
               quizState: newState,
               wrongQuestionIds,
+              sessionId: currentSessionId,
             }),
           );
         }
@@ -189,6 +210,7 @@ function QuizContent() {
           round,
           quizState: state,
           wrongQuestionIds,
+          sessionId: sessionIdRef.current,
         }),
       );
     },
@@ -296,6 +318,7 @@ function QuizContent() {
         level,
         isTestMode,
         themeBreakdown,
+        sessionId: sessionIdRef.current,
       };
 
       const maxRetries = 3;
@@ -525,28 +548,17 @@ function QuizContent() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col p-4 md:p-8">
-      {/* Header */}
-      <header className="-mb-4 flex items-center gap-3">
+    <div className="flex min-h-screen flex-col p-4 md:p-6">
+      {/* Compact Header: User | Progress | Timers */}
+      <header className="mb-4 flex items-center gap-3">
+        {/* User avatar */}
         <span
-          className={`flex h-10 w-10 items-center justify-center rounded-full text-lg font-bold text-white ${user.bgColor}`}
+          className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold text-white ${user.bgColor}`}
         >
           {user.id}
         </span>
-      </header>
 
-      {/* Centered Timers */}
-      <div className="mb-4 flex flex-col items-center gap-1">
-        <Timer initialSeconds={totalTimeSeconds} onTimeUp={handleTimeUp} />
-        <CircularTimer
-          key={`question-${questionKey}`}
-          initialSeconds={questionTimeSeconds}
-          resetKey={questionKey}
-        />
-      </div>
-
-      {/* Progress */}
-      <div className="mb-6">
+        {/* Progress bar (flexible width) */}
         <ProgressBar
           current={quizState.currentQuestion}
           total={quizData.questions.length}
@@ -556,7 +568,17 @@ function QuizContent() {
               .filter((a) => a === null).length
           }
         />
-      </div>
+
+        {/* Timers */}
+        <div className="flex items-center gap-2 flex-shrink-0">
+          <CircularTimer
+            key={`question-${questionKey}`}
+            initialSeconds={questionTimeSeconds}
+            resetKey={questionKey}
+          />
+          <Timer initialSeconds={totalTimeSeconds} onTimeUp={handleTimeUp} />
+        </div>
+      </header>
 
       {/* Question */}
       <main className="flex-1">

@@ -49,7 +49,7 @@ export default function CircularTimer({
       : "text-indigo-600";
 
   return (
-    <div className="relative flex h-10 w-10 items-center justify-center">
+    <div className="relative flex h-8 w-8 items-center justify-center">
       <svg className="absolute h-full w-full -rotate-90" viewBox="0 0 100 100">
         <circle
           cx="50"
@@ -57,7 +57,7 @@ export default function CircularTimer({
           r="40"
           fill="none"
           stroke="#e5e7eb"
-          strokeWidth="8"
+          strokeWidth="10"
         />
         <circle
           cx="50"
@@ -65,14 +65,14 @@ export default function CircularTimer({
           r="40"
           fill="none"
           stroke={strokeColor}
-          strokeWidth="8"
+          strokeWidth="10"
           strokeLinecap="round"
           strokeDasharray={circumference}
           strokeDashoffset={strokeDashoffset}
           className={`transition-all duration-1000 ease-linear ${isVeryLow ? "animate-pulse" : ""}`}
         />
       </svg>
-      <span className={`text-sm font-bold ${textColor}`}>{seconds}</span>
+      <span className={`text-xs font-bold tabular-nums ${textColor}`}>{seconds}</span>
     </div>
   );
 }
