@@ -1,4 +1,4 @@
-name: galamath
+workspace: galamath
 
 agents:
   - path: ./agents
@@ -6,7 +6,6 @@ agents:
 
 shells:
   - type: claude
-    color: gray
     agents:
       - "*"
   - type: shell
@@ -21,9 +20,9 @@ terminal:
         col: 0
         row: 0
       shell:
-        color: yellow
         col: 1
         row: 0
+        color: yellow
         height: 10
       webapp:
         shell_type: shell
